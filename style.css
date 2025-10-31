@@ -204,31 +204,41 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 /**/
 
 /*:::::::::::::::::::::::::::::::::::::::: ▼ platform-independent */
+:root{
+  --masthead  :             rgb( 50%,   0%,  38%);
+  --mastheadBg:             rgb( 50%,   0%,  38%);
+}
 
 /*———————————————————————————————————————— logo bar */
 
-#masthead{ background-color:var(--dark-gray); }
+#masthead{ /* main top bar */
+  background-color:var(--mastheadBg);
+}
 
 .site-branding{
   height:5.7rem;
   background-color:#0F00;
   border-bottom:1px solid var(--bright);
   padding-top:0.63rem;
+  border:10px solid yellow;
 }
   
 .custom-logo-link{
   float:left;
   margin-top:0.31rem;
+ border:1px solid lime;
 }
 
 .custom-logo-link .custom-logo{
   background-color:var(--bright);
   width:225px;
   height:60px;
+ border:1px solid red;
 }
 
 .site-title{
-  display:none;
+/*  display:none; */
+ border:1px solid cyan;
 }
 /**/
 /*———————————————————————————————————————— nav bar */
