@@ -4,7 +4,7 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: gd-theme style.css */
 
-/*———————————————————————————————————————— style.css
+/*———————————————————————————————————————— theme info
 
   Theme Name:   GD Theme
   Description:  underscore-me must be installed
@@ -67,6 +67,23 @@
   --link-alt-active: color(display-p3 0.09 0.32 1.00);
 
 }
+/**/
+/*———————————————————————————————————————— color variables */
+
+:root{
+  --bodyColor             : #333;
+  --siteDescColor         : #999;
+  --hxColor               : red;
+
+  --siteBranding          :             rgb( 50%,   0%,  38%);
+  --siteBrandingBg        :             white;
+  --siteNavBg             :                   white;
+  --siteNavLinkColor      :#555;
+  --siteNavLinkActiveColor:red;
+
+  --dividerColor          : #0004;
+}
+
 /**/
 /*———————————————————————————————————————— inline colors
 
@@ -164,6 +181,15 @@
   Bookerly-LCD-Light-Italic.woff*
 
 /**/
+/*———————————————————————————————————————— font variables - matches color variables */
+
+:root{
+  --bodyFont    : 400 1.0em "IBM Plex Sans";
+  --siteDescFont: 400 0.8em "IBM Plex Sans";
+  --siteNavFont : 400 0.9em "IBM Plex Mono";
+  --hxFont      : 700 1.0em "IBM Plex Sans";
+}
+/**/
 /*———————————————————————————————————————— defaults */
 
 * { box-sizing: border-box; }
@@ -178,19 +204,17 @@ html{
 body{
   width: 100vw;
   height: 100vh;
-  font-family:'Bookerly';
-  font-weight:300;
-  font-size:100%;
   margin:0;
+  color:var(--bodyColor);
+  font:var(--bodyFont);
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family:Rajdhani;
-  font-weight:700;
+  font:var(--hxFont);
+  color:var(--hxColor);
 }
 
 #page{
-	color:var(--text);
   position: relative;
 }
 
@@ -203,29 +227,14 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 }
 /**/
 
-/*:::::::::::::::::::::::::::::::::::::::: ▼ platform-independent */
-:root{
-  --siteBranding  :             rgb( 50%,   0%,  38%);
-  --siteBrandingBg:             white;
-  --siteNavBg:                   white;
-  --siteNavLink:black;
-  --siteNavLinkActive:red;
+/*:::::::::::::::::::::::::::::::::::::::: css definitions */
 
-  --divider: #0004;
-}
+/*———————————————————————————————————————— site-branding (main top bar) */
 
-#masthead{ /* top of page incl. breadcrumbs */
-}
-.main-navigation{
-}
-
-
-/*———————————————————————————————————————— logo bar */
-
-.site-branding{ /* main top bar */
+.site-branding{
   height:5.7rem;
   background-color:var(--siteBrandingBg);
-  border-bottom:1px dotted var(--divider);
+  border-bottom:1px dotted var(--dividerColor);
   padding-top:0.63rem;
 }
   
@@ -244,30 +253,35 @@ input[type="search"] { /* turn off automatic iPhone rounding */
   transform:scale(1.1);
 }
 
+.site-description{
+  font:var(--siteDescFont);
+  color:var(--siteDescColor);
+
+  line-height: 1.27rem;
+  text-transform: uppercase;
+}
+
 .site-title{ /* p tag containing site title in link */
   display:none;
 }
 /**/
-/*———————————————————————————————————————— nav bar */
+/*———————————————————————————————————————— site navigation (breadcrumbs) */
 
 #site-navigation{ /* main breadcrumbs */
   background-color:var(--siteNavBg);
-  font-family:Rajdhani;
-  font-size:1.00rem;
-  font-weight:400;
+  font:var(--siteNavFont);
+/*text-transform:uppercase; */
 }
-/**/
-/*———————————————————————————————————————— nav links */
 
 .menu-item a:link,
 .menu-item a:visited{
-  color:var(--siteNavLink);
+  color:var(--siteNavLinkColor);
 }
 
 .menu-item a:hover,
-.menu-item a:active,
-#x{
-  color:var(--siteNavLinkActive);
+.menu-item a:active{
+  color:var(--siteNavLinkActiveColor);
+  border-bottom:1px dotted var(--siteNavLinkActiveColor);
 }
 /**/
 /*———————————————————————————————————————— sub menus */
@@ -298,7 +312,6 @@ header.entry-header h1.entry-title{
 	font-size:2.1rem;
   line-height:2.6rem;
 	font-weight:600;
-	letter-spacing:-0.06rem;
 }
 
 main#primary a:link, main#primary a:visited{
@@ -352,7 +365,6 @@ span.posted-on, span.byline{
 	font-size:2.1rem;
   line-height:2.6rem;
 	font-weight:600;
-	letter-spacing:-0.06rem;
 }
 
 .site-main h2{
@@ -360,7 +372,6 @@ span.posted-on, span.byline{
   margin:1.0rem 0 0.6rem 0;
 	font-size:1.8rem;
 	font-weight:600;
-	letter-spacing:-0.05rem;
 }
 
 .site-main h3{
@@ -368,7 +379,6 @@ span.posted-on, span.byline{
   margin:1.0rem 0 0.6rem 0;
 	font-size:1.5rem;
 	font-weight:600;
-	letter-spacing:-0.04rem;
 }
 
 .site-main h4{
@@ -376,7 +386,6 @@ span.posted-on, span.byline{
   margin:0.8rem 0 0 0;
 	font-size:1.2rem;
 	font-weight:600;
-	letter-spacing:-0.03rem;
 }
 
 .site-main h1 a:link, .site-main h1 a:visited,
@@ -642,7 +651,6 @@ border-top:none;
 {
   margin-left:1rem;
   text-transform:uppercase;
-  letter-spacing:0.2rem;
   font-size:0.8rem;
   font-weight:600;
 }
@@ -689,7 +697,6 @@ h2.comments-title{
   font-style:italic;
   font-size:1.0rem;
   font-weight:400;
-  letter-spacing:0.013rem;
   margin:0.4rem 0 1.2rem 0;
 }
 
@@ -867,7 +874,6 @@ form#commentform p.form-submit input#submit{
   padding:4px 20px 3px 20px;
   margin-top:0.6rem;
   height:1.5rem;
-  letter-spacing:0.05rem;
   font-family:Open Sans;
 }
 /**/
@@ -907,7 +913,6 @@ aside.widget-area section.widget h2.widgettitle{
   border-radius:5px;
   color:var(--bright);
   text-transform:uppercase;
-  letter-spacing:0.05rem;
   font-weight:normal;
   padding:3px 0px 3px 10px;
   height:1.5rem;
@@ -976,7 +981,6 @@ section.widget_search form.search-form input.search-submit{
   margin-top:10px;
   height:1.5rem;
   float:right;
-  letter-spacing:0.05rem;
   font-family:Open Sans;
 }
 /**/
@@ -1045,7 +1049,6 @@ li.recentcomments a:active{
   color:var(--gray-text);
   text-align:center;
   font-size:0.8rem;
-  letter-spacing:0.06rem;
 }
 
 .site-info a:link,
@@ -1062,7 +1065,7 @@ li.recentcomments a:active{
 }
 /**/
 
-/*:::::::::::::::::::::::::::::::::::::::: ▲ end platform independent */
+/*:::::::::::::::::::::::::::::::::::::::: ▼ media query dependent */
 
 /*———————————————————————————————————————— ▼ 48em+ · big screen */
 
@@ -1079,13 +1082,6 @@ li.recentcomments a:active{
   margin-right: 2.5rem;
   text-align: right;
 
-  font-weight: 300;
-  font-size: 0.70rem;
-  line-height: 1.27rem;
-
-  text-transform: uppercase;
-  letter-spacing:0.03rem;
-  color:var(--bright);
 }
 /**/
 /*———————————————————————————————————————— nav bar */
