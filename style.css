@@ -1,21 +1,17 @@
-/*———————————————————————————————————————— style.css */
 
-/*———————————————————————————————————————— information
+/* vim: set foldmethod=marker fmr=/*—,/**/ :*/
 
-  Theme Name:   Underscore Tech 
-  Xheme Name:   Underscore Blog
+/*:::::::::::::::::::::::::::::::::::::::: gd-theme style.css */
+
+/*———————————————————————————————————————— style.css
+
+  Theme Name:   GD Theme
   Description:  underscore-me must be installed
   Author:       Andrew Swift
   Template:     underscore-me
-  Version:      1.0.2
+  Version:      1.0.0
 
-  Instructions: to change websites:
-                
-                1. change the theme name above
-                2. reverse the order of the color
-                   blocks below
-
-—————————————————————————————————————————— */
+/**/
 /*———————————————————————————————————————— colors
 
     see palette definitions in functions.php */
@@ -70,7 +66,7 @@
   --link-alt-active: color(display-p3 0.09 0.32 1.00);
 
 }
-
+/**/
 /*———————————————————————————————————————— inline colors
 
     must match custom colors in functions.php */
@@ -90,7 +86,7 @@
 .has-link-active-color    {color: rgb( 74%,  25%,  40%) !important; }
 .has-link-alt-color       {color: rgb( 74%,  25%,  40%) !important; }
 .has-link-alt-active-color{color: rgb(  8%,  30%,  96%) !important; }
-
+/**/
 /*———————————————————————————————————————— basic settings */
 
 html{
@@ -121,9 +117,9 @@ input{
 input[type="search"] { /* turn off automatic iPhone rounding */
   -webkit-appearance: none;
 }
+/**/
 
-
-/*———————————————————————————————————————— ▼ platform-independent */
+/*:::::::::::::::::::::::::::::::::::::::: ▼ platform-independent */
 
 /*———————————————————————————————————————— logo bar */
 
@@ -150,13 +146,13 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 .site-title{
   display:none;
 }
-
+/**/
 /*———————————————————————————————————————— nav bar */
 
 #site-navigation, .main-navigation{
   background-color:var(--dark-gray);
 }
-
+/**/
 /*———————————————————————————————————————— nav links */
 
 .menu-item a:link,
@@ -171,7 +167,7 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 #x{
   color:var(--nav-link-active);
 }
-
+/**/
 /*———————————————————————————————————————— sub menus */
 
 .menu-item .sub-menu{
@@ -187,7 +183,7 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 .menu-item .sub-menu a:active{
   color:var(--nav-link-active);
 }
-
+/**/
 /*———————————————————————————————————————— main content */
 
 main#primary{
@@ -211,7 +207,7 @@ main#primary a:link, main#primary a:visited{
 main#primary a:hover, main#primary a:active{
   color:var(--link-active);
 }
-
+/**/
 /*———————————————————————————————————————— recent entries page */
 
 .wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li hr.wp-block-separator{
@@ -224,7 +220,7 @@ main#primary a:hover, main#primary a:active{
 	color:var(--light-gray);
   font-size:0.8rem;
 }
-
+/**/
 /*———————————————————————————————————————— featured image in post
 
     shows only on recent entries page */
@@ -233,19 +229,19 @@ main#primary a:hover, main#primary a:active{
 div.post-thumbnail img.wp-post-image{
   display:none;
 }
-
+/**/
 /*———————————————————————————————————————— entry header */
 
 header.entry-header{
   margin-top:2.0rem;
 }
-
+/**/
 /*———————————————————————————————————————— posted on by */
 
 span.posted-on, span.byline{
   font-style:italic;
 }
-
+/**/
 /*———————————————————————————————————————— h tags */
 
 .site-main h1{
@@ -296,7 +292,7 @@ span.posted-on, span.byline{
 #x{
   color:var(--link-alt-active) !important;
 }
-
+/**/
 /*———————————————————————————————————————— hr, strong & p */
 
 main.site-main article.page div.entry-content hr.wp-block-separator,
@@ -319,7 +315,7 @@ main.site-main article.post div.entry-content hr.wp-block-separator{
 	font-weight:600;
   color:var(--text-bold);
 }
-
+/**/
 /*———————————————————————————————————————— lists */
 
 .site-main ol,
@@ -374,7 +370,7 @@ main.site-main article.post div.entry-content hr.wp-block-separator{
 #x{
   color:var(--link-alt-active);
 }
-
+/**/
 /*———————————————————————————————————————— boxed paragraphs */
 
 .site-main div.wp-block-group.boxed{
@@ -394,7 +390,7 @@ main.site-main article.post div.entry-content hr.wp-block-separator{
   margin-bottom:0.6rem;
   line-height:1.8rem;
 }
-
+/**/
 /*———————————————————————————————————————— pre */
 
 pre{
@@ -405,7 +401,7 @@ pre{
   font-family:Andale Mono, Courier, monospace;
   margin:1.3rem 0;
 }
-
+/**/
 /*———————————————————————————————————————— images */
 
 .wp-block-image.wp-block-image{
@@ -446,7 +442,7 @@ figure.panel img{
 .wp-block-image.left{
   text-align:left;
 }
-
+/**/
 /*———————————————————————————————————————— image & table captions */
 
 figure.wp-block-table figcaption,
@@ -468,7 +464,7 @@ figure.wp-block-table table{
 figure.wp-block-table.is-style-stripes{
   border-bottom:none;
 }
-
+/**/
 /*———————————————————————————————————————— youtube embed */
 
 figure.wp-block-embed{
@@ -487,7 +483,7 @@ div.wp-block-embed__wrapper iframe{
   padding-top:0.4rem;
   filter: drop-shadow(0rem 0.5rem 0.8rem #0003);
 }
-
+/**/
 /*———————————————————————————————————————— search results */
 
 h1.page-title span{ color:var(--dark-gray);
@@ -548,9 +544,9 @@ border-top:none;
   font-size:0.8rem;
   font-weight:600;
 }
+/**/
+/*———————————————————————————————————————— 404 page - on-page widgets · COMMENTED OUT
 
-/*———————————————————————————————————————— 404 page - on-page widgets · COMMENTED OUT */
-/*
 div.widget, div.widget_recent_entries{ background-color:lime; }
 div.widget_recent_entries h2.widget-title,
 div.widget_recent_entries h2.widgettitle{ background-color:blue; }
@@ -566,14 +562,14 @@ div.widget_archive h2.widgettitle{ background-color:blue; }
 div.widget, div.widget_tag_cloud{ background-color:lime; }
 div.widget_tag_cloud h2.widget-title,
 div.widget_tag_cloud h2.widgettitle{ background-color:blue; }
-*/
 
+/**/
 /*———————————————————————————————————————— togglable paragraphs */
 
 .togglable{
   display:none;
 }
-
+/**/
 /*———————————————————————————————————————— comment section */
 
 div#comments, div.comments-area{ /* gray box */
@@ -610,7 +606,7 @@ p.logged-in-as a:visited{
   color:var(--dark-gray) !important;
   opacity:50%;
 }
-
+/**/
 /*———————————————————————————————————————— comment list */
 
 ol.comment-list{
@@ -704,7 +700,7 @@ em.comment-awaiting-moderation{
 
 div.reply a.comment-reply-link{
 }
-
+/**/
 /*———————————————————————————————————————— comments reply */
 
 div#respond{
@@ -772,7 +768,7 @@ form#commentform p.form-submit input#submit{
   letter-spacing:0.05rem;
   font-family:Open Sans;
 }
-
+/**/
 /*———————————————————————————————————————— footer */
 
 nav.posts-navigation{
@@ -783,7 +779,7 @@ nav.posts-navigation{
 
 nav.posts-navigation div.nav-links{
 }
-
+/**/
 /*———————————————————————————————————————— widget area in footer */
 
 aside.widget-area{
@@ -819,7 +815,7 @@ section.widget a:link,
 section.widget a:followed{
   color:var(--link);
 }
-
+/**/
 /*———————————————————————————————————————— widget: nav menu */
 
 section.widget ul{
@@ -838,7 +834,7 @@ section.widget .menu-item a:hover,
 section.widget .menu-item a:active{
   color:var(--link-active);
 }
-
+/**/
 /*———————————————————————————————————————— widget: search
 
   section #search-2 .widget .widget_search
@@ -881,7 +877,7 @@ section.widget_search form.search-form input.search-submit{
   letter-spacing:0.05rem;
   font-family:Open Sans;
 }
-
+/**/
 /*———————————————————————————————————————— widget: recent posts */
 
 section.widget_recent_entries ul{
@@ -900,10 +896,10 @@ li a:hover,
 li a:active{
   color:var(--link-active);
 }
-
+/**/
 /*———————————————————————————————————————— widget: most used categories */
 /* shown on 404 page */
-
+/**/
 /*———————————————————————————————————————— widget: recent comments */
 
 section.widget_recent_comments ul#recentcomments{
@@ -933,7 +929,7 @@ li.recentcomments a:hover,
 li.recentcomments a:active{
   color:var(--link-active);
 }
-
+/**/
 /*———————————————————————————————————————— footer */
 
 #colophon, .site-footer {
@@ -962,14 +958,14 @@ li.recentcomments a:active{
 #x{
   color:white;
 }
+/**/
 
-/*———————————————————————————————————————— ▲ end platform independent */
-
+/*:::::::::::::::::::::::::::::::::::::::: ▲ end platform independent */
 
 /*———————————————————————————————————————— ▼ 48em+ · big screen */
 
 @media screen and ( min-width: 48em ){
-
+/**/
 /*———————————————————————————————————————— logo bar */
 
 .site-branding{
@@ -989,13 +985,13 @@ li.recentcomments a:active{
   letter-spacing:0.03rem;
   color:var(--bright);
 }
-
+/**/
 /*———————————————————————————————————————— nav bar */
 
 #site-navigation, .main-navigation{
 	margin-left:1.9rem;
 }
-
+/**/
 /*———————————————————————————————————————— search form */
 
 #site-navigation .search-form{
@@ -1010,7 +1006,7 @@ li.recentcomments a:active{
 .main-navigation .search-submit{
 	display:none;
 }
-
+/**/
 /*———————————————————— unfocused */
 
 #site-navigation .search-form .search-field{
@@ -1035,7 +1031,7 @@ li.recentcomments a:active{
 #site-navigation .search-form .search-field:hover::placeholder{
   color:white;
 }
-
+/**/
 /*———————————————————— focused */
 
 #site-navigation .search-form .search-field:focus{
@@ -1059,8 +1055,7 @@ li.recentcomments a:active{
        </label>
        <input type="submit" class="search-submit" value="Search"/>
    </form> */
-
-
+/**/
 /*———————————————————————————————————————— nav links */
 
 .menu-item a:link,
@@ -1070,7 +1065,7 @@ li.recentcomments a:active{
   margin-right:2.0rem;
 	margin-left:-0.4rem;
 }
-
+/**/
 /*———————————————————————————————————————— sub menus */
 
 .menu-item .sub-menu{
@@ -1079,20 +1074,20 @@ li.recentcomments a:active{
   padding:0rem 1rem 0.5rem 1rem;
   border-radius:0px 0px 5px 5px;
   }
-
+/**/
 /*———————————————————————————————————————— main content */
 
 main#primary{
   padding: 1.5rem 3rem 0rem 3rem;
   max-width:1000px;
 }
-
+/**/
 /*———————————————————————————————————————— image & table captions */
 figure.wp-block-image figcaption{
   height:200%;
   font-size:200%;
 }
-
+/**/
 /*———————————————————————————————————————— tables */
 
 figure.wp-block-table table td{
@@ -1102,7 +1097,7 @@ figure.wp-block-table table td{
 figure.wp-block-table table{
   border:0.5px solid #0003;
 }
-
+/**/
 /*———————————————————————————————————————— recent entries page */
 
 .wp-block-post-template.is-flex-container, .wp-block-query-loop.is-flex-container {
@@ -1113,7 +1108,7 @@ figure.wp-block-table table{
 .wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li, .wp-block-query-loop.is-flex-container.is-flex-container.columns-3 > li {
     width:calc(33.33333% - 1.35em)
 }
-
+/**/
 /*———————————————————————————————————————— comment sign-in */
 
 /*orm action="https://tech.svija.love/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
@@ -1183,22 +1178,23 @@ form#commentform p.comment-form-url label{
 form#commentform p.comment-form-cookies-consent{
   margin-top:0.4rem;
 }
-
+/**/
 /*———————————————————————————————————————— widget area */
 
 section.widget{
   width:23rem;
   margin-bottom:1rem;
 }
-
+/**/
 /*——————————————————————————————————————— ▲ end 48em+ */
 
 }
+/**/
 
 /*———————————————————————————————————————— ▼ 20-48em · iPhone portrait */
 
 @media screen and ( min-width: 20em ) and ( max-width: 48em ){
-
+/**/
 /*———————————————————————————————————————— logo bar */
 
 .site-branding{
@@ -1208,12 +1204,12 @@ section.widget{
 .site-description{
   display:none;
 }
-
+/**/
 /*———————————————————————————————————————— nav bar */
 
 #site-navigation, .main-navigation{
 }
-
+/**/
 /*———————————————————————————————————————— menu toggle button */
 
 #site-navigation button.menu-toggle{
@@ -1237,7 +1233,7 @@ nav.main-navigation{
 
 nav#site-navigation.toggled{ /* visible nav */
 }
-
+/**/
 /*———————————————————————————————————————— search in menu */
 
 nav#site-navigation .search-form{ display:none; }
@@ -1246,7 +1242,7 @@ nav#site-navigation.toggled .search-form{ display:block;
   margin-left:1.7rem;
   margin-bottom:1.1rem;
 }
-
+/**/
 /*———————————————————————————————————————— inactive */
 
 nav#site-navigation form.search-form input.search-field,
@@ -1278,7 +1274,7 @@ nav#site-navigation form.search-form input.search-field{
 #site-navigation .search-form .search-field::placeholder{
 	color:var(--dim);
 }
-
+/**/
 /*———————————————————————————————————————— focused */
 
 #site-navigation .search-form .search-field:focus{
@@ -1297,7 +1293,7 @@ nav#site-navigation form.search-form input.search-field{
        </label>
        <input type="submit" class="search-submit" value="Search"/>
    </form> */
-
+/**/
 /*———————————————————————————————————————— nav links */
 
 nav#site-navigation div.menu-header-menu-container{
@@ -1330,19 +1326,19 @@ nav#site-navigation.toggled ul#primary-menu li{
   padding:0 0 0 1.7rem;
   margin:0;
 }
-
+/**/
 /*———————————————————————————————————————— sub menus */
 
 .menu-item ul.sub-menu{
   display:none;
 }
-
+/**/
 /*———————————————————————————————————————— main content */
 
 main#primary{
   padding: 0.5rem 1.6rem;
 }
-
+/**/
 /*———————————————————————————————————————— tables */
 
 figure.wp-block-table table td{
@@ -1352,13 +1348,13 @@ figure.wp-block-table table td{
 figure.wp-block-table table{
   border:1px solid #0003;
 }
-
+/**/
 /*———————————————————————————————————————— recent entries page */
 
 .wp-block-post-template.is-flex-container, .wp-block-query-loop.is-flex-container {
   margin-left:0px;
 }
-
+/**/
 /*———————————————————————————————————————— comment sign-in */
 
 /*orm action="https://tech.svija.love/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
@@ -1426,16 +1422,17 @@ form#commentform p.comment-form-url label{
 form#commentform p.comment-form-cookies-consent{
   margin-top:0.4rem;
 }
-
+/**/
 /*———————————————————————————————————————— widget area */
 
 section.widget{
   width:100%;
 }
-
+/**/
 /*——————————————————————————————————————— ▲ end 20-48em */
 
 }
+/**/
 
 /*———————————————————————————————————————— notes & info */
 
@@ -1459,7 +1456,7 @@ section.widget{
   text-align:center;
 }
 */
-
+/**/
 /*———————————————————————————————————————— other media queries */
 
 @media screen and (min-width: 30em) { /* iPhone SE›8+ landscape */
@@ -1481,7 +1478,7 @@ section.widget{
 @media screen and ( max-width: 48.875em ) and ( min-width: 48em ) {
   /* #page{border:4px solid purple;} */
 }
-
+/**/
 /*———————————————————————————————————————— body —— page structure */
 /* body ——— page structure
     #page .site
@@ -1520,5 +1517,7 @@ menu w/children: .menu-item .menu-item-type-custom .menu-item-object-custom .cur
 
 */
 
+/**/
 
-/*———————————————————————————————————————— fin */
+/*:::::::::::::::::::::::::::::::::::::::: fin */
+

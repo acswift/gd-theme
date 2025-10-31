@@ -1,27 +1,23 @@
 
+<!-- vim: set foldmethod=marker fmr=###,--- :-->
+
+*Updated 30 October, 2025*
+
+### GD Theme
+
+This is the WP theme used at generatordata.net
+
 For the theme to work correctly, underscore-me theme needs to be in wp-content/themes
 ```
 ln -s /home/gd-theme/underscore-me-source /home/generatordata/wp-content/themes/underscore-me
 ln -s /home/gd-theme /home/generatordata/wp-content/themes/gd-theme
 ```
+---
+### Customizing Theme Info
 
-
-*Updated 12 September, 2022 · apache.svija.love*
-
-![Svija: SVG-based websites built in Adobe Illustrator][logo]
-
-# Underscore-Tech
-
-This is the WP theme used at tech.svija.love.
-
-*Checklist when copying to Underscore-Blog*
-
-- **style.css** change name at top
-- **style.css** comment out correct colors
-- **header.php** change tracking n°s 
+Edit `style.css` and update the information at the top of the file.
 
 ---
-
 ### Primary Menu
 
 For the top menu to display correctly:
