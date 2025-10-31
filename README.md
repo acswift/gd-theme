@@ -29,6 +29,15 @@ rsync -vaPur filetoupload $GD
 ```
 ---
 
+</details><details><summary>Home Page</summary>
+
+### Home Page 
+
+Go to Settings › Reading:
+- Your homepage displays: `A static page`
+
+---
+
 </details><details><summary>Fonts</summary>
 
 ### Fonts

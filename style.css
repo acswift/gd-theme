@@ -205,61 +205,69 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 
 /*:::::::::::::::::::::::::::::::::::::::: ▼ platform-independent */
 :root{
-  --masthead  :             rgb( 50%,   0%,  38%);
-  --mastheadBg:             rgb( 50%,   0%,  38%);
+  --siteBranding  :             rgb( 50%,   0%,  38%);
+  --siteBrandingBg:             white;
+  --siteNavBg:                   white;
+  --siteNavLink:black;
+  --siteNavLinkActive:red;
+
+  --divider: #0004;
 }
+
+#masthead{ /* top of page incl. breadcrumbs */
+}
+.main-navigation{
+}
+
 
 /*———————————————————————————————————————— logo bar */
 
-#masthead{ /* main top bar */
-  background-color:var(--mastheadBg);
-}
-
-.site-branding{
+.site-branding{ /* main top bar */
   height:5.7rem;
-  background-color:#0F00;
-  border-bottom:1px solid var(--bright);
+  background-color:var(--siteBrandingBg);
+  border-bottom:1px dotted var(--divider);
   padding-top:0.63rem;
-  border:10px solid yellow;
 }
   
-.custom-logo-link{
+.custom-logo-link{ /* logo container */
   float:left;
   margin-top:0.31rem;
- border:1px solid lime;
 }
 
-.custom-logo-link .custom-logo{
-  background-color:var(--bright);
-  width:225px;
+.custom-logo-link .custom-logo{ /* logo image 5x1 */
+  width:300px;
   height:60px;
- border:1px solid red;
+  transition:0.5s;
 }
 
-.site-title{
-/*  display:none; */
- border:1px solid cyan;
+.custom-logo-link .custom-logo:hover{ /* logo image 5x1 */
+  transform:scale(1.1);
+}
+
+.site-title{ /* p tag containing site title in link */
+  display:none;
 }
 /**/
 /*———————————————————————————————————————— nav bar */
 
-#site-navigation, .main-navigation{
-  background-color:var(--dark-gray);
+#site-navigation{ /* main breadcrumbs */
+  background-color:var(--siteNavBg);
+  font-family:Rajdhani;
+  font-size:1.00rem;
+  font-weight:400;
 }
 /**/
 /*———————————————————————————————————————— nav links */
 
 .menu-item a:link,
 .menu-item a:visited{
-  color:var(--nav-link);
-  font-size:0.87rem;
-  font-weight:400;
+  color:var(--siteNavLink);
 }
 
 .menu-item a:hover,
 .menu-item a:active,
 #x{
-  color:var(--nav-link-active);
+  color:var(--siteNavLinkActive);
 }
 /**/
 /*———————————————————————————————————————— sub menus */
