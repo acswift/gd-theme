@@ -13,11 +13,18 @@ ln -s /home/gd-theme/underscore-me-source /home/generatordata/wp-content/themes/
 ln -s /home/gd-theme /home/generatordata/wp-content/themes/gd-theme
 ```
 ---
+
+<details>
+</details><details><summary>Customizing Theme Info</summary>
+
 ### Customizing Theme Info
 
 Edit `style.css` and update the information at the top of the file.
 
 ---
+
+</details><details><summary>Primary Menu</summary>
+
 ### Primary Menu
 
 For the top menu to display correctly:
@@ -26,6 +33,27 @@ For the top menu to display correctly:
 - click on Main Menu and check **Primary**
 
 ---
+
+</details><details><summary>Footer Links</summary>
+
+### Footer Links
+
+Footer links are in footer.php:
+```
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://generatordata.net', 'underscore-me' ) ); ?>">
+				<?php printf( esc_html__( '%s', 'underscore-me' ), 'generatordata.net' ); ?>
+			</a>
+			<span class="sep"> | </span>
+			<a href="<?php echo esc_url( __( 'https://llpowerservices.com', 'underscore-me' ) ); ?>">
+				<?php printf( esc_html__( '%s', 'underscore-me' ), 'llpowerservices.com' ); ?>
+			</a>
+		</div><!-- .site-info -->
+```
+---
+
+</details><details><summary>Special CSS</summary>
+
 ### Special CSS
 
 Cross referenced to [tech.svija.love](https://github.com/svijalove/tech.svija.love)
@@ -66,5 +94,7 @@ figure.panel img{
   box-shadow:0px 10px 40px #00000028;
   margin:0.1rem 0 0.1rem 0;
 }
-
 ```
+---
+
+</details><details><summary>Special CSS</summary>

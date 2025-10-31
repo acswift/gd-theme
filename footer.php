@@ -14,16 +14,12 @@
   <!-- https://developer.wordpress.org/reference/functions/esc_html__/ -->
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://svija.love', 'underscore-me' ) ); ?>">
-				<?php printf( esc_html__( '%s', 'underscore-me' ), 'svija.love' ); ?>
+			<a href="<?php echo esc_url( __( 'https://generatordata.net', 'underscore-me' ) ); ?>">
+				<?php printf( esc_html__( '%s', 'underscore-me' ), 'generatordata.net' ); ?>
 			</a>
 			<span class="sep"> | </span>
-			<a href="<?php echo esc_url( __( 'https://tech.svija.love', 'underscore-me' ) ); ?>">
-				<?php printf( esc_html__( '%s', 'underscore-me' ), 'tech.svija.love' ); ?>
-			</a>
-			<span class="sep"> | </span>
-			<a href="<?php echo esc_url( __( 'https://blog.svija.love', 'underscore-me' ) ); ?>">
-				<?php printf( esc_html__( '%s', 'underscore-me' ), 'blog.svija.love' ); ?>
+			<a href="<?php echo esc_url( __( 'https://llpowerservices.com', 'underscore-me' ) ); ?>">
+				<?php printf( esc_html__( '%s', 'underscore-me' ), 'llpowerservices.com' ); ?>
 			</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
