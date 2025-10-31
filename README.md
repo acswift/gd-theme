@@ -47,6 +47,14 @@ chmod -R 755 fonts
 ```
 ---
 
+</details><details><summary>Logo</summary>
+
+### Logo
+
+Upload the logo via Customize › Site Identity › Logo
+
+---
+
 </details><details><summary>Customizing Theme Info</summary>
 
 ### Customizing Theme Info
