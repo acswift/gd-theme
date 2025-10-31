@@ -49,7 +49,7 @@
 
   /* same on both sites */
 
-  --h-tag:           rgb(41%, 49%, 73%);
+  --h-tag:           red;
   --text:            rgb(40%, 40%, 40%);
   --text-bold:       rgb(20%, 20%, 20%);
   --gray-text:       rgb(50%, 50%, 50%);
@@ -71,6 +71,7 @@
 /*———————————————————————————————————————— color variables */
 
 :root{
+  --postedOnColor         : #999;
   --bodyColor             : #333;
   --siteDescColor         : #999;
   --hxColor               : red;
@@ -184,6 +185,7 @@
 /*———————————————————————————————————————— font variables - matches color variables */
 
 :root{
+  --postedOnFont: 300 0.8em "IBM Plex Mono";
   --bodyFont    : 400 1.0em "IBM Plex Sans";
   --siteDescFont: 400 0.8em "IBM Plex Sans";
   --siteNavFont : 400 0.9em "IBM Plex Mono";
@@ -207,6 +209,10 @@ body{
   margin:0;
   color:var(--bodyColor);
   font:var(--bodyFont);
+}
+
+a{
+  text-decoration:none;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -302,6 +308,22 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 /**/
 /*———————————————————————————————————————— main content */
 
+span.posted-on, span.byline{
+  font:var(--postedOnFont);
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+
+span.posted-on, span.posted-on a:link, span.posted-on a:visited,
+span.byline, span.byline a:link, span.byline a:visited{
+  color:var(--postedOnColor);
+}
+
+span.posted-on a:hover, span.posted-on a:active,
+span.byline a:hover, span.byline a:active{
+color:red;
+}
+
 main#primary{
   margin: 0 auto;
 }
@@ -314,10 +336,10 @@ header.entry-header h1.entry-title{
 	font-weight:600;
 }
 
-main#primary a:link, main#primary a:visited{
+/*main#primary a:link, main#primary a:visited{
   color:var(--link);
   text-decoration:none;
-}
+}*/
 
 main#primary a:hover, main#primary a:active{
   color:var(--link-active);
@@ -351,12 +373,6 @@ header.entry-header{
   margin-top:2.0rem;
 }
 /**/
-/*———————————————————————————————————————— posted on by */
-
-span.posted-on, span.byline{
-  font-style:italic;
-}
-/**/
 /*———————————————————————————————————————— h tags */
 
 .site-main h1{
@@ -370,7 +386,7 @@ span.posted-on, span.byline{
 .site-main h2{
 	color:var(--h-tag);
   margin:1.0rem 0 0.6rem 0;
-	font-size:1.8rem;
+	font-size:1.3rem;
 	font-weight:600;
 }
 
