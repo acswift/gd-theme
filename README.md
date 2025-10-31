@@ -15,6 +15,38 @@ ln -s /home/gd-theme /home/generatordata/wp-content/themes/gd-theme
 ---
 
 <details>
+</details><details><summary>Uploading Files</summary>
+
+### Uploading Files
+
+I can already SSH into the server, so that's not an issue.
+```
+# add to .bashrc
+GD="root@45.79.0.91:/home/uploads/"
+
+# on the iMac
+rsync -vaPur filetoupload $GD
+```
+---
+
+</details><details><summary>Fonts</summary>
+
+### Fonts
+
+Previously, font families were defined in `header.php` (Google fonts only):
+```
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+```
+I have put them in /fonts in this repo, so the links look like:
+```
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly.woff') format('woff');
+```
+For them to work it is necessary to:
+```
+chmod -R 755 fonts
+```
+---
+
 </details><details><summary>Customizing Theme Info</summary>
 
 ### Customizing Theme Info

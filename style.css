@@ -88,6 +88,30 @@
 .has-link-alt-color       {color: rgb( 74%,  25%,  40%) !important; }
 .has-link-alt-active-color{color: rgb(  8%,  30%,  96%) !important; }
 /**/
+/*———————————————————————————————————————— font faces */
+
+@font-face {
+  font-family:'Bookerly';
+  font-weight:400;
+  font-style:normal;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly.woff') format('woff');
+ }
+/*
+Bookerly-Bold-Italic.woff*
+Bookerly-Bold.woff*
+Bookerly-Display-Bold-Italic.woff
+Bookerly-Display-Bold.woff*
+Bookerly-Display-Italic.woff*
+Bookerly-Display.woff*
+Bookerly-Italic.woff*
+Bookerly-LCD-Italic.woff*
+Bookerly-LCD-Light-Italic.woff*
+Bookerly-Light-Italic.woff*
+Bookerly-Light.woff*
+*
+
+*/
+/**/
 /*———————————————————————————————————————— basic settings */
 
 html{
@@ -100,7 +124,7 @@ html{
 body{
   width: 100vw;
   height: 100vh;
-  font-family:'Open Sans';
+  font-family:'Bookerly';
   font-weight:400;
   font-size:100%;
   margin:0;
@@ -119,6 +143,8 @@ input[type="search"] { /* turn off automatic iPhone rounding */
   -webkit-appearance: none;
 }
 /**/
+
+
 
 /*:::::::::::::::::::::::::::::::::::::::: ▼ platform-independent */
 
