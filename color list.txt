@@ -1,0 +1,86 @@
+<?php
+// ———————————————————————————————————————— custom css
+
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+function my_theme_enqueue_styles() {
+ 
+    $parent_style = 'underscore-me-css';
+ 
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array( $parent_style ),
+        wp_get_theme()->get('Version')
+    );
+}
+
+// ———————————————————————————————————————— custom text
+// Load translation files from your child theme instead of the parent theme
+function my_child_theme_locale() {
+    load_child_theme_textdomain( 'underscore-me', get_stylesheet_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'my_child_theme_locale' );
+
+// ———————————————————————————————————————— custom color palette 
+// https://wpdevelopment.courses/articles/gutenberg-colour-settings/#h-how-to-define-custom-color-palettes
+// rows of five
+
+function wpdc_add_custom_gutenberg_color_palette() {
+  add_theme_support(
+    'editor-color-palette',
+    [
+      [ 'name'  => esc_html__( 'Red', 'wpdc' ),
+        'slug'  => 'red',
+        'color' => 'rgb(100%, 0%, 0%)', ],
+
+      [ 'name'  => esc_html__( 'Dark Gray', 'wpdc' ),
+        'slug'  => 'dark-gray',
+        'color' => 'rgb(20%, 20%, 20%)', ],
+
+      [ 'name'  => esc_html__( 'Light Gray', 'wpdc' ),
+        'slug'  => 'light-gray',
+        'color' => 'rgb(70%, 70%, 70%)', ],
+
+      [ 'name'  => esc_html__( 'Bright Tech', 'wpdc' ),
+        'slug'  => 'bright-tech',
+        'color' => 'rgb( 75%, 100%,  0%)', ],
+
+      [ 'name'  => esc_html__( 'Bright Blog', 'wpdc' ),
+        'slug'  => 'bright-blog',
+        'color' => 'rgb(100%,   0%, 75%)', ],
+
+      [ 'name'  => esc_html__( 'Dim Tech', 'wpdc' ),
+        'slug'  => 'dim-tech',
+        'color' => 'rgb( 75%, 100%,  0%)', ],
+
+      [ 'name'  => esc_html__( 'Dim Blog', 'wpdc' ),
+        'slug'  => 'dim-blog',
+        'color' => 'rgb(100%,   0%, 75%)', ],
+
+      [ 'name'  => esc_html__( 'H Tag', 'wpdc' ),
+        'slug'  => 'h-tag',
+        'color' => 'rgb(41%, 49%, 73%)', ],
+
+      [ 'name'  => esc_html__( 'Link', 'wpdc' ),
+        'slug'  => 'link',
+        'color' => 'rgb(41%, 49%, 73%)', ],
+
+      [ 'name'  => esc_html__( 'Link Active', 'wpdc' ),
+        'slug'  => 'link-active',
+        'color' => 'rgb(74%, 25%, 40%)', ],
+
+      [ 'name'  => esc_html__( 'Link Alt', 'wpdc' ),
+        'slug'  => 'link-alt',
+        'color' => 'rgb(74%, 25%, 40%)', ],
+
+      [ 'name'  => esc_html__( 'Link Alt Active', 'wpdc' ),
+        'slug'  => 'link-alt-active',
+        'color' => 'rgb( 8%, 30%, 96%)', ],
+
+    ]
+  );
+}
+add_action( 'after_setup_theme', 'wpdc_add_custom_gutenberg_color_palette' );
+
+// ———————————————————————————————————————— fin

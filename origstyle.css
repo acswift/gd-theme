@@ -1,0 +1,183 @@
+/*--------------------
+  Theme Name:   Svija Underscore
+  description:  underscore-me must be installed
+  Author:       Andrew Swift
+  Template:     underscore-me
+  Version:      1.0.0
+--------------------*/
+
+/*———————————————————————————————————————— html */
+
+html,
+#x{
+}
+
+body,
+#x{
+  font-family:'Source Sans Pro';
+  font-weight:300;
+  font-size:1.1rem;
+  margin-bottom:0 !important;
+}
+
+a.skip-link,
+a.screen-reader-text,
+#x{
+  background-color:gray;
+}
+
+/*———————————————————————————————————————— whole page */
+
+#page,
+#x{
+}
+
+/*———————————————————————————————————————— top bar */
+
+#masthead,
+.site-header.site-header,
+#x{
+  border:solid 1px #000b;
+  border-radius:0.5rem;
+  margin:1.0rem;
+  padding:2rem;
+  background-color:#000b;
+  color:#af0f;
+  color: color(display-p3 0.75 1 0);
+  }
+
+.site-branding,
+#x{
+  background-color:#0F00;
+}
+
+.site-title a:link,
+#x{
+  font-weight:700;
+  font-size:3rem;
+  color: color(display-p3 0.75 1 0);
+}
+
+.site-title a:visited,
+#x{
+  color: color(display-p3 0.75 1 0);
+}
+
+#site-navigation, .main-navigation
+#x{
+  background-color:#00F0;
+}
+
+.menu-item,
+#x{
+  border:1px solid #af0f;
+  padding:.1em 1em;
+  margin:.1em 1em;
+  color:#af0f;
+}
+
+/*———————————————————————————————————————— main content */
+
+#primary,
+.site-main,
+#x{
+  border:1px solid #000a;
+  border-radius:0.5rem;
+  padding:0.3rem 15rem 2rem 15rem;
+  margin:1.0rem;
+}
+
+header.entry-header, /* hide titles because we want other text before, and we want modified date above */
+h1.entry-title,
+#x{
+  display:none;
+}
+
+.site-main a:link,
+.site-main a:visited,
+#x{
+  color:black;
+  text-decoration:none;
+  border-bottom:1px dotted #000f;
+  }
+
+#post-11,
+.type-page,
+.status-publish,
+.hentry,
+#x{
+  margin:0;
+  padding:0;
+}
+
+.entry-content,
+#x{
+  margin:0;
+  padding:0;
+}
+
+.wp-block-embed,
+#x{
+  width:100%;
+  text-align:center;
+}
+
+/*———————————————————————————————————————— secondary content */
+
+#secondary,
+#x{
+  background-color:#000a;
+  border-radius:0.5rem 0.5rem 0 0;
+  margin:1.0rem;
+  margin-bottom:0;
+  padding:2rem;
+  color:white;
+}
+
+/*———————————————————————————————————————— footer */
+
+#colophon,
+.site-footer,
+#x{
+  background-color:#000a;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding:0;
+  margin:1.0rem;
+  margin-top:0;
+}
+
+.site-info, /* bar at very bottom */
+#x{
+  background-color:#0002;
+  color:white;
+  text-align:center;
+  font-size:0.8rem;
+  padding:0.4rem;
+}
+
+.site-info a:link,
+.site-info a:visited,
+#x{
+  color:white;
+  text-decoration:none;
+}
+
+/*———————————————————————————————————————— images */
+
+.retina{
+  zoom:0.5;
+/*margin-top:-25px;
+  padding-bottom:25px;*/
+}
+
+.shadow{
+  margin-top:-7px !important;
+  margin-bottom:-12px !important;
+}
+
+.wp-block-image.wp-block-image{
+  width:100%;
+  text-align:center;
+}
+
+/*———————————————————————————————————————— fin */

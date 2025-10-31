@@ -1,0 +1,1524 @@
+/*———————————————————————————————————————— style.css */
+
+/*———————————————————————————————————————— information
+
+  Theme Name:   Underscore Tech 
+  Xheme Name:   Underscore Blog
+  Description:  underscore-me must be installed
+  Author:       Andrew Swift
+  Template:     underscore-me
+  Version:      1.0.2
+
+  Instructions: to change websites:
+                
+                1. change the theme name above
+                2. reverse the order of the color
+                   blocks below
+
+—————————————————————————————————————————— */
+/*———————————————————————————————————————— colors
+
+    see palette definitions in functions.php */
+
+:root {
+
+  --bright:          rgb(100%,   0%,  75%); /* blog */
+  --bright:          color(display-p3 1.00 0.00 0.75); /* blog */
+
+  --dim:             rgb( 50%,   0%,  38%);
+  --dim:             color(display-p3 0.50 0.00 0.38);
+
+  --dark-gray:       rgb( 16%,  20%,  25%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  --bright:          rgb( 75%, 100%,   0%); /* tech */
+  --bright:          color(display-p3 0.75 1.00 0.00); /* tech */
+
+  --dim:             rgb( 38%,  50%,   0%);
+  --dim:             color(display-p3 0.38 0.50 0.00);
+
+  --dark-gray:       rgb( 20%,  20%,  20%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  --bright:          rgb(100%,   0%,  75%); /* blog */
+  --dim:             rgb( 50%,   0%,  38%);
+  --dark-gray:       rgb( 16%,  20%,  25%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  --bright:          rgb( 75%, 100%,   0%); /* tech */
+  --dim:             rgb( 38%,  50%,   0%);
+  --dark-gray:       rgb( 20%,  20%,  20%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  /* same on both sites */
+
+  --h-tag:           rgb(41%, 49%, 73%);
+  --text:            rgb(40%, 40%, 40%);
+  --text-bold:       rgb(20%, 20%, 20%);
+  --gray-text:       rgb(50%, 50%, 50%);
+
+  --nav-link:        rgb(70%, 70%, 70%);
+  --nav-link-active: rgb(99%, 99%, 99%);
+
+  --link:            rgb(41%, 49%, 73%);
+  --link-alt:        rgb(74%, 25%, 40%);
+
+  --link-active:     rgb(74%, 25%, 40%);
+  --link-active:     color(display-p3 0.74 0.25 0.40);
+
+  --link-alt-active: rgb( 8%, 30%, 96%);
+  --link-alt-active: color(display-p3 0.09 0.32 1.00);
+
+}
+
+/*———————————————————————————————————————— inline colors
+
+    must match custom colors in functions.php */
+
+.has-red-color            {color: rgb(100%,   0%,   0%) !important; }
+.has-dark-gray-color      {color: rgb( 20%,  20%,  20%) !important; }
+.has-light-gray-color     {color: rgb( 70%,  70%,  70%) !important; }
+  
+.has-bright-tech-color    {color: rgb( 75%, 100%,   0%) !important; }
+.has-bright-blog-color    {color: rgb(100%,   0%,  75%) !important; }
+.has-dim-tech-color       {color: rgb( 38%,  50%,   0%) !important; }
+.has-dim-blog-color       {color: rgb( 50%,   0%,  38%) !important; }
+  
+.has-h-tag-color          {color: rgb( 41%,  49%,  73%) !important; }
+  
+.has-link-color           {color: rgb( 41%,  49%,  73%) !important; }
+.has-link-active-color    {color: rgb( 74%,  25%,  40%) !important; }
+.has-link-alt-color       {color: rgb( 74%,  25%,  40%) !important; }
+.has-link-alt-active-color{color: rgb(  8%,  30%,  96%) !important; }
+
+/*———————————————————————————————————————— basic settings */
+
+html{
+  width: 100vw;
+  height: 100vh;
+  font-size:16px !important;
+}
+
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family:'Open Sans';
+  font-weight:400;
+  font-size:100%;
+  margin:0;
+}
+
+#page{
+	color:var(--text);
+  position: relative;
+}
+
+input{
+  border-radius:5px;
+}
+
+input[type="search"] { /* turn off automatic iPhone rounding */
+  -webkit-appearance: none;
+}
+
+
+/*———————————————————————————————————————— ▼ platform-independent */
+
+/*———————————————————————————————————————— logo bar */
+
+#masthead{ background-color:var(--dark-gray); }
+
+.site-branding{
+  height:5.7rem;
+  background-color:#0F00;
+  border-bottom:1px solid var(--bright);
+  padding-top:0.63rem;
+}
+  
+.custom-logo-link{
+  float:left;
+  margin-top:0.31rem;
+}
+
+.custom-logo-link .custom-logo{
+  background-color:var(--bright);
+  width:225px;
+  height:60px;
+}
+
+.site-title{
+  display:none;
+}
+
+/*———————————————————————————————————————— nav bar */
+
+#site-navigation, .main-navigation{
+  background-color:var(--dark-gray);
+}
+
+/*———————————————————————————————————————— nav links */
+
+.menu-item a:link,
+.menu-item a:visited{
+  color:var(--nav-link);
+  font-size:0.87rem;
+  font-weight:400;
+}
+
+.menu-item a:hover,
+.menu-item a:active,
+#x{
+  color:var(--nav-link-active);
+}
+
+/*———————————————————————————————————————— sub menus */
+
+.menu-item .sub-menu{
+  background-color:var(--dark-gray);
+  }
+
+.menu-item .sub-menu a:link,
+.menu-item .sub-menu a:visited{
+  color:var(--nav-link);
+}
+
+.menu-item .sub-menu a:hover,
+.menu-item .sub-menu a:active{
+  color:var(--nav-link-active);
+}
+
+/*———————————————————————————————————————— main content */
+
+main#primary{
+  margin: 0 auto;
+}
+
+header.entry-header h1.entry-title{
+	color:var(--h-tag);
+  margin:1.0rem 0 0.6rem 0;
+	font-size:2.1rem;
+  line-height:2.6rem;
+	font-weight:600;
+	letter-spacing:-0.06rem;
+}
+
+main#primary a:link, main#primary a:visited{
+  color:var(--link);
+  text-decoration:none;
+}
+
+main#primary a:hover, main#primary a:active{
+  color:var(--link-active);
+}
+
+/*———————————————————————————————————————— recent entries page */
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li hr.wp-block-separator{
+	margin:0;
+  padding:0;
+}
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li div.wp-block-post-date{
+	font-style:italic;
+	color:var(--light-gray);
+  font-size:0.8rem;
+}
+
+/*———————————————————————————————————————— featured image in post
+
+    shows only on recent entries page */
+
+/* header.entry-header div.post-thumbnail img.wp-post-image{*/
+div.post-thumbnail img.wp-post-image{
+  display:none;
+}
+
+/*———————————————————————————————————————— entry header */
+
+header.entry-header{
+  margin-top:2.0rem;
+}
+
+/*———————————————————————————————————————— posted on by */
+
+span.posted-on, span.byline{
+  font-style:italic;
+}
+
+/*———————————————————————————————————————— h tags */
+
+.site-main h1{
+	color:var(--h-tag);
+  margin:1.0rem 0 0.6rem 0;
+	font-size:2.1rem;
+  line-height:2.6rem;
+	font-weight:600;
+	letter-spacing:-0.06rem;
+}
+
+.site-main h2{
+	color:var(--h-tag);
+  margin:1.0rem 0 0.6rem 0;
+	font-size:1.8rem;
+	font-weight:600;
+	letter-spacing:-0.05rem;
+}
+
+.site-main h3{
+	color:var(--h-tag);
+  margin:1.0rem 0 0.6rem 0;
+	font-size:1.5rem;
+	font-weight:600;
+	letter-spacing:-0.04rem;
+}
+
+.site-main h4{
+	color:var(--h-tag);
+  margin:0.8rem 0 0 0;
+	font-size:1.2rem;
+	font-weight:600;
+	letter-spacing:-0.03rem;
+}
+
+.site-main h1 a:link, .site-main h1 a:visited,
+.site-main h2 a:link, .site-main h2 a:visited,
+.site-main h3 a:link, .site-main h3 a:visited,
+.site-main h4 a:link, .site-main h4 a:visited,
+#x{
+  color:var(--link-alt) !important;
+}
+
+.site-main h1 a:hover, .site-main h1 a:active,
+.site-main h2 a:hover, .site-main h2 a:active,
+.site-main h3 a:hover, .site-main h3 a:active,
+.site-main h4 a:hover, .site-main h4 a:active,
+#x{
+  color:var(--link-alt-active) !important;
+}
+
+/*———————————————————————————————————————— hr, strong & p */
+
+main.site-main article.page div.entry-content hr.wp-block-separator,
+main.site-main article.post div.entry-content hr.wp-block-separator{
+  border-top:none;
+  border-bottom:1px dotted var(--dark-gray);
+  background:none;
+  margin:1.5rem -3%;
+  width:106%;
+}
+
+.site-main p{
+  padding:0;
+  margin-top:0.6rem;
+  margin-bottom:0.6rem;
+  line-height:1.8rem;
+}
+
+.site-main strong{
+	font-weight:600;
+  color:var(--text-bold);
+}
+
+/*———————————————————————————————————————— lists */
+
+.site-main ol,
+.site-main ul{
+  padding:0;
+  margin-top:0.6rem;
+  margin-bottom:0.6rem;
+  line-height:2.2rem;
+}
+
+.site-main ul ul{
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:0rem;
+  list-style-type:none;
+}
+
+.site-main ul ul ul{
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:1.2rem;
+  list-style-type:disc;
+}
+
+.site-main ul ul a:link,
+.site-main ul ul a:visited,
+#x{
+  color:var(--link-alt);
+}
+
+.site-main ul ul a:hover,
+.site-main ul ul a:active,
+#x{
+  color:var(--link-alt-active);
+}
+
+.site-main ul ul ul{
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:2.4rem;
+  list-style-type:disc;
+}
+
+.site-main ul ul ul a:link,
+.site-main ul ul ul a:visited,
+#x{
+  color:var(--text);
+}
+
+.site-main ul ul ul a:hover,
+.site-main ul ul ul a:active,
+#x{
+  color:var(--link-alt-active);
+}
+
+/*———————————————————————————————————————— boxed paragraphs */
+
+.site-main div.wp-block-group.boxed{
+  background-color:rgb(95%, 95%,85%);
+  border-radius:5px;
+  padding:0.2rem 1rem 0.8rem 1.7rem;
+  border:1px solid rgba(0%, 0%, 0%, 20%);
+  margin-top:1.5rem !important;
+  margin-bottom:1.2rem !important;
+}
+
+.site-main div.wp-block-group.boxed ol,
+.site-main div.wp-block-group.boxed ul{
+  padding:0;
+  margin-left:1.3rem;
+  margin-top:0.6rem;
+  margin-bottom:0.6rem;
+  line-height:1.8rem;
+}
+
+/*———————————————————————————————————————— pre */
+
+pre{
+  border-radius:5px;
+  border:1px dotted var(--light-gray);
+  padding:0.5rem 0 0.5rem 1.0rem;
+  background-image: linear-gradient(#f8F8F8, #fff, #f8F8F8);
+  font-family:Andale Mono, Courier, monospace;
+  margin:1.3rem 0;
+}
+
+/*———————————————————————————————————————— images */
+
+.wp-block-image.wp-block-image{
+  width:100%;
+  text-align:center;
+}
+
+.retina{
+  zoom:0.5;
+  margin:1.3rem 0 1.1rem 0;
+}
+
+.shadow{ /* 20px white space over · 30px white space under */
+  margin-top:-0.5rem;
+  margin-bottom:-1.4rem;
+}
+
+figure.drop img{
+  border-radius:10px !important;
+  border:0.5px solid #0004;
+  box-shadow:0px 10px 40px #00000028;
+}
+
+figure.mac img{
+  border-radius:20px !important;
+  border:0.5px solid #0004;
+  box-shadow:0px 10px 40px #00000028;
+  margin:0.1rem 0 0.1rem 0;
+}
+
+figure.panel img{
+  border-radius:10px 10px 0px 0px !important;
+  border:none;
+  box-shadow:0px 10px 40px #00000028;
+  margin:0.1rem 0 0.1rem 0;
+}
+
+.wp-block-image.left{
+  text-align:left;
+}
+
+/*———————————————————————————————————————— image & table captions */
+
+figure.wp-block-table figcaption,
+figure.wp-block-image figcaption{
+  font-weight:300;
+  font-style:italic;
+  text-align:center;
+  font-size:16px;
+	color:var(--link-alt);
+}
+
+/* retina figures are shown at 50% */
+
+figure.wp-block-table table{
+  margin-block-start:8px;
+  margin-block-end:10px;
+}
+
+figure.wp-block-table.is-style-stripes{
+  border-bottom:none;
+}
+
+/*———————————————————————————————————————— youtube embed */
+
+figure.wp-block-embed{
+/* other classes
+is-type-video
+is-provider-youtube
+wp-block-embed-youtube
+wp-embed-aspect-16-9
+wp-has-aspect-ratio */
+  text-align:center;
+}
+
+figure.wp-block-embed iframe,
+div.wp-block-embed__wrapper iframe{
+  /* drop-shadow(offset-x offset-y blur-radius color) */
+  padding-top:0.4rem;
+  filter: drop-shadow(0rem 0.5rem 0.8rem #0003);
+}
+
+/*———————————————————————————————————————— search results */
+
+h1.page-title span{ color:var(--dark-gray);
+}
+
+article.type-page{
+  margin:0;
+  padding:0.2rem 0 1.1rem 0;
+  border-top:1px dotted var(--light-gray);
+}
+
+article.type-page:first-of-type{
+border-top:none;
+}
+
+.hentry .entry-header h2.entry-title{
+  font-size:1.2rem;
+  line-height:1.6rem;
+	margin-bottom:0.7rem;
+  padding:0;
+}
+
+.hentry .entry-header h2.entry-title a:link,
+.hentry .entry-header h2.entry-title a:visited{
+  color:var(--link-alt) !important;
+}
+
+.hentry .entry-header h2.entry-title a:hover,
+.hentry .entry-header h2.entry-title a:active{
+  color:var(--link-alt-active) !important;
+}
+
+.entry-summary{
+  margin:0;
+  padding:0;
+}
+
+.entry-summary p{
+  margin:0;
+  margin-bottom:0.6rem;
+  padding:0;
+  font-size:0.9rem;
+}
+
+.entry-footer .comments-link,
+.entry-footer .comments-link
+{
+  font-size:0.9rem;
+  font-style:italic;
+}
+
+.entry-footer .edit-link,
+.entry-footer .edit-link
+{
+  margin-left:1rem;
+  text-transform:uppercase;
+  letter-spacing:0.2rem;
+  font-size:0.8rem;
+  font-weight:600;
+}
+
+/*———————————————————————————————————————— 404 page - on-page widgets · COMMENTED OUT */
+/*
+div.widget, div.widget_recent_entries{ background-color:lime; }
+div.widget_recent_entries h2.widget-title,
+div.widget_recent_entries h2.widgettitle{ background-color:blue; }
+
+div.widget, div.widget_categories{ background-color:lime; }
+div.widget_categories h2.widget-title,
+div.widget_categories h2.widgettitle{ background-color:blue; }
+
+div.widget, div.widget_archive{ background-color:lime; }
+div.widget_archive h2.widget-title,
+div.widget_archive h2.widgettitle{ background-color:blue; }
+
+div.widget, div.widget_tag_cloud{ background-color:lime; }
+div.widget_tag_cloud h2.widget-title,
+div.widget_tag_cloud h2.widgettitle{ background-color:blue; }
+*/
+
+/*———————————————————————————————————————— togglable paragraphs */
+
+.togglable{
+  display:none;
+}
+
+/*———————————————————————————————————————— comment section */
+
+div#comments, div.comments-area{ /* gray box */
+  border:1px dotted var(--light-gray);
+  border-radius:5px;
+  margin-top:1.2rem;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+/*  background-color:#0001; */
+  background-image: linear-gradient(#f8F8F8, #fff, #fff);
+}
+
+h3#reply-title, h3.comment-reply-title,
+h2.comments-title{
+  color:var(--dark-gray);
+  font-style:italic;
+  font-size:1.0rem;
+  font-weight:400;
+  letter-spacing:0.013rem;
+  margin:0.4rem 0 1.2rem 0;
+}
+
+h2.comments-title span{
+  color:var(--h-tag);
+}
+
+p.logged-in-as{
+  text-transform:uppercase;
+  font-size:0.8rem;
+  border-bottom:1px dotted var(--dark-gray);
+}
+
+p.logged-in-as a:link,
+p.logged-in-as a:visited{
+  color:var(--dark-gray) !important;
+  opacity:50%;
+}
+
+/*———————————————————————————————————————— comment list */
+
+ol.comment-list{
+  margin:0;
+  padding:0;
+}
+
+li.comment{
+/*li.byuser
+li.comment-author-andrew
+li.bypostauthor
+li.even
+li.thread-even
+li.depth-1*/
+}
+
+/*
+article.comment-body
+footer.comment-eta
+div.comment-author, div.vcard
+img.avatar, img.avater-32, img.photo
+b.fn
+a.url
+span.says
+
+div.comment-metadata
+  a
+     time
+  span.edit-link
+    a.coment-edit-link
+*/
+
+div.comment-author{
+  margin-bottom:0px;
+}
+
+div.comment-author img.avatar{
+  border:1px dotted var(--dark-gray);
+  border-radius:5px;
+  filter: drop-shadow(0.2rem 0.2rem 0.3rem #0003);
+  margin-right:0.4rem;
+  vertical-align:-19px;
+}
+
+footer.comment-meta{
+  padding:0;
+  margin:0;
+}
+
+div.comment-metadata{
+  text-transform:uppercase;
+  opacity:50%;
+  font-size:0.8rem;
+  padding-bottom:7px;
+  border-bottom:1px dotted var(--dark-gray);
+  padding-left:2.7rem;
+  position:relative;
+  top:-13px;
+  margin-bottom:-13px;
+}
+
+span.says{
+  display:none;
+}
+
+div.comment-metadata a:link,
+div.comment-metadata a:visited{
+  color:var(--dark-gray) !important;
+}
+
+div.comment-content{
+  padding-top:0.0rem;
+  padding-bottom:1.0rem;
+  font-size:0.92em;
+}
+
+div.comment-content p{
+}
+
+div.reply{
+  text-align:right;
+  font-style:italic;
+  font-size:0.9rem;
+}
+
+em.comment-awaiting-moderation{
+  font-style:italic;
+  font-size:0.9rem;
+  color:var(--light-gray);
+}
+
+div.reply a.comment-reply-link{
+}
+
+/*———————————————————————————————————————— comments reply */
+
+div#respond{
+}
+
+/* Leave a Reply */
+h3#reply-title, h3.comment-reply-title{
+  /* moved above to match h2.comments-title */
+  padding:0;
+  margin:0;
+}
+
+h3#reply-title small{
+  padding-left:0.5rem;
+}
+
+form#commentform, form.comment-form{
+  padding:0;
+  margin:0;
+}
+
+p.comment-notes{
+  font-style:italic;
+  font-size:0.9rem;
+}
+
+textarea#comment{
+margin-top:0.7rem;
+}
+
+form#commentform p{
+  padding:0;
+  margin:0;
+}
+
+p.comment-form-comment{
+}
+
+p.comment-form-comment label{
+display:none;
+}
+
+p.form-submit{
+text-align:right;
+}
+
+input#submit, input.submit{
+  background-color:var(--dark-gray);
+  color:var(--color);
+}
+
+/* p.form-submit
+     input#submit, input.submit */
+
+form#commentform p.form-submit input#submit{
+  font-size:12px;
+  background-color:var(--dark-gray);
+  border-radius:5px;
+  color:white;
+  text-transform:uppercase;
+  font-weight:normal;
+  padding:4px 20px 3px 20px;
+  margin-top:0.6rem;
+  height:1.5rem;
+  letter-spacing:0.05rem;
+  font-family:Open Sans;
+}
+
+/*———————————————————————————————————————— footer */
+
+nav.posts-navigation{
+  text-transform:uppercase;
+  font-size:0.9rem;
+  font-weight:600;
+}
+
+nav.posts-navigation div.nav-links{
+}
+
+/*———————————————————————————————————————— widget area in footer */
+
+aside.widget-area{
+  color:var(--dark-gray);
+  margin:1rem auto 0 auto;
+  padding:0.85rem;
+  text-align:center;
+}
+
+aside.widget-area section.widget{
+  margin:0;
+  padding:0 0.85rem;
+  font-size:14px;
+  text-align:left;
+  display:inline-block;
+  vertical-align: top;
+}
+
+aside.widget-area section.widget h2.widget-title,
+aside.widget-area section.widget h2.widgettitle{
+  font-size:12px;
+  background-color:var(--dark-gray);
+  border-radius:5px;
+  color:var(--bright);
+  text-transform:uppercase;
+  letter-spacing:0.05rem;
+  font-weight:normal;
+  padding:3px 0px 3px 10px;
+  height:1.5rem;
+}
+
+section.widget a:link,
+section.widget a:followed{
+  color:var(--link);
+}
+
+/*———————————————————————————————————————— widget: nav menu */
+
+section.widget ul{
+  list-style-position: outside;
+  padding:0 2rem 0.4rem 3rem;
+  margin:0;
+}
+
+section.widget .menu-item a:link,
+section.widget .menu-item a:visited{
+  color:var(--link);
+  text-decoration:none;
+}
+
+section.widget .menu-item a:hover,
+section.widget .menu-item a:active{
+  color:var(--link-active);
+}
+
+/*———————————————————————————————————————— widget: search
+
+  section #search-2 .widget .widget_search
+    form .search-form
+      label
+        input .search-field
+        input .search-submit
+*/
+
+
+section.widget_search{
+  margin-bottom:0.8rem;
+}
+
+
+section.widget_search form.search-form input.search-field,
+section.widget_search form.search-form input.search-submit{
+  height:2rem;
+  border-radius:5px;
+  margin:0;
+  padding:0 0.6rem;
+}
+
+section.widget_search form.search-form input.search-field{
+  width:100%;
+  border:1px solid var(--dark-gray);
+}
+
+section.widget_search form.search-form input.search-submit{
+  font-size:12px;
+  background-color:var(--dark-gray);
+  border-radius:5px;
+  color:white;
+  text-transform:uppercase;
+  font-weight:normal;
+  padding:4px 20px 3px 20px;
+  margin-top:10px;
+  height:1.5rem;
+  float:right;
+  letter-spacing:0.05rem;
+  font-family:Open Sans;
+}
+
+/*———————————————————————————————————————— widget: recent posts */
+
+section.widget_recent_entries ul{
+  list-style-position: outside;
+  padding:0 2rem 0.4rem 3rem;
+  margin:0;
+}
+
+li a:link,
+li a:visited{
+  color:var(--link);
+  text-decoration:none;
+}
+
+li a:hover,
+li a:active{
+  color:var(--link-active);
+}
+
+/*———————————————————————————————————————— widget: most used categories */
+/* shown on 404 page */
+
+/*———————————————————————————————————————— widget: recent comments */
+
+section.widget_recent_comments ul#recentcomments{
+  list-style-position: outside;
+  padding:0 2rem 0.4rem 3rem;
+  margin:0;
+}
+
+section.widget .comment-author-link a:link,
+section.widget .comment-author-link a:visited{
+  color:var(--link);
+  text-decoration:none;
+}
+
+section.widget .comment-author-link a:hover,
+section.widget .comment-author-link a:active{
+  color:var(--link-active);
+}
+
+li.recentcomments a:link,
+li.recentcomments a:visited{
+  color:var(--link);
+  text-decoration:none;
+}
+
+li.recentcomments a:hover,
+li.recentcomments a:active{
+  color:var(--link-active);
+}
+
+/*———————————————————————————————————————— footer */
+
+#colophon, .site-footer {
+  background-color:var(--dark-gray);
+  margin:0;
+  height:1.9rem;
+}
+
+.site-info{ /* bar at very bottom */
+  padding-top:0.4rem;
+  color:var(--gray-text);
+  text-align:center;
+  font-size:0.8rem;
+  letter-spacing:0.06rem;
+}
+
+.site-info a:link,
+.site-info a:visited,
+#x{
+  color:var(--light-gray);
+  text-decoration:none;
+}
+
+.site-info a:hover,
+.site-info a:active,
+#x{
+  color:white;
+}
+
+/*———————————————————————————————————————— ▲ end platform independent */
+
+
+/*———————————————————————————————————————— ▼ 48em+ · big screen */
+
+@media screen and ( min-width: 48em ){
+
+/*———————————————————————————————————————— logo bar */
+
+.site-branding{
+  padding-left:1.77rem;
+}
+
+.site-description{
+  margin-top: 0.97rem;
+  margin-right: 2.5rem;
+  text-align: right;
+
+  font-weight: 300;
+  font-size: 0.70rem;
+  line-height: 1.27rem;
+
+  text-transform: uppercase;
+  letter-spacing:0.03rem;
+  color:var(--bright);
+}
+
+/*———————————————————————————————————————— nav bar */
+
+#site-navigation, .main-navigation{
+	margin-left:1.9rem;
+}
+
+/*———————————————————————————————————————— search form */
+
+#site-navigation .search-form{
+	display:inline;
+	float:left;
+	margin:0;
+	margin-top:5px;
+  margin-left:0.5rem;
+}
+
+#site-navigation .search-submit, /* hide submit button */
+.main-navigation .search-submit{
+	display:none;
+}
+
+/*———————————————————— unfocused */
+
+#site-navigation .search-form .search-field{
+  font-family:Open Sans;
+  font-size:0.90rem;
+  font-weight:400;
+	margin-right:-0.5rem;
+	color:white;
+  background:none;
+	border:none;
+	width:88px;
+	height:25px;
+	outline: none;
+  cursor:pointer;
+}
+
+#site-navigation .search-form .search-field::placeholder{
+	color:var(--light-gray);
+  opacity: 1; /* firefox */
+}
+
+#site-navigation .search-form .search-field:hover::placeholder{
+  color:white;
+}
+
+/*———————————————————— focused */
+
+#site-navigation .search-form .search-field:focus{
+	width:20rem;
+	color:var(--dark-gray);
+  background-color:var(--bright);
+  margin-right:2.0em;
+  padding-left:0.5rem;
+  cursor:text;
+}
+
+#site-navigation .search-form .search-field:focus::placeholder{
+	color:var(--dim);
+  text-decoration:none;
+}
+
+/* <form role="search" method="get" class="search-form" action="https://tech.svija.love/">
+       <label>
+           <span class="screen-reader-text">Search for:</span>
+           <input type="search" class="search-field" placeholder="Search &hellip;" value="svijax" name="s"/>
+       </label>
+       <input type="submit" class="search-submit" value="Search"/>
+   </form> */
+
+
+/*———————————————————————————————————————— nav links */
+
+.menu-item a:link,
+.menu-item a:visited{
+  height:2.20rem;
+  padding-top:0.5rem;
+  margin-right:2.0rem;
+	margin-left:-0.4rem;
+}
+
+/*———————————————————————————————————————— sub menus */
+
+.menu-item .sub-menu{
+  display:block;
+  margin-left:-1.0rem;
+  padding:0rem 1rem 0.5rem 1rem;
+  border-radius:0px 0px 5px 5px;
+  }
+
+/*———————————————————————————————————————— main content */
+
+main#primary{
+  padding: 1.5rem 3rem 0rem 3rem;
+  max-width:1000px;
+}
+
+/*———————————————————————————————————————— image & table captions */
+figure.wp-block-image figcaption{
+  height:200%;
+  font-size:200%;
+}
+
+/*———————————————————————————————————————— tables */
+
+figure.wp-block-table table td{
+  padding:4px 20px;
+}
+
+figure.wp-block-table table{
+  border:0.5px solid #0003;
+}
+
+/*———————————————————————————————————————— recent entries page */
+
+.wp-block-post-template.is-flex-container, .wp-block-query-loop.is-flex-container {
+  margin-left:0px;
+  gap:2.00em
+}
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li, .wp-block-query-loop.is-flex-container.is-flex-container.columns-3 > li {
+    width:calc(33.33333% - 1.35em)
+}
+
+/*———————————————————————————————————————— comment sign-in */
+
+/*orm action="https://tech.svija.love/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+    <p class="comment-notes">
+        <span id="email-notes">Your email address will not be published.</span>
+         Required fields are marked
+        <span class="required">*</span>
+    </p>
+    <p class="comment-form-comment">
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>
+    </p>
+    <p class="comment-form-author">
+        <label for="author">
+            Name
+            <span class="required">*</span>
+        </label>
+        <input id="author" name="author" type="text" value="Herman" size="30" maxlength="245" required='required'/>
+    </p>
+    <p class="comment-form-email">
+        <label for="email">
+            Email
+            <span class="required">*</span>
+        </label>
+        <input id="email" name="email" type="email" value="melville@whitewhale.com" size="30" maxlength="100" aria-describedby="email-notes" required='required'/>
+    </p>
+    <p class="comment-form-url">
+        <label for="url">Website</label>
+        <input id="url" name="url" type="url" value="http://whitewhale.com" size="30" maxlength="200"/>
+    </p>
+    <p class="comment-form-cookies-consent">
+        <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" checked="checked"/>
+        <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+    </p>
+    <p class="form-submit">
+        <input name="submit" type="submit" id="submit" class="submit" value="Post Comment"/>
+        <input type='hidden' name='comment_post_ID' value='152' id='comment_post_ID'/>
+        <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+    </p>
+</form> */
+
+form#commentform p.comment-form-author label,
+form#commentform p.comment-form-email label,
+form#commentform p.comment-form-url label{
+  font-size:0.92rem;
+  display:inline-block;
+  width:7.0rem;
+  text-align:right;
+  padding-right:0.5rem;
+}
+
+form#commentform p.comment-form-author input,
+form#commentform p.comment-form-email input,
+form#commentform p.comment-form-url input{
+  display:inline-block;
+  margin-bottom:0.5rem;
+}
+
+form#commentform p.comment-form-author{
+  margin-top:0.9rem;
+}
+
+form#commentform p.comment-form-url label{
+  padding-right:1.2rem;
+}
+
+form#commentform p.comment-form-cookies-consent{
+  margin-top:0.4rem;
+}
+
+/*———————————————————————————————————————— widget area */
+
+section.widget{
+  width:23rem;
+  margin-bottom:1rem;
+}
+
+/*——————————————————————————————————————— ▲ end 48em+ */
+
+}
+
+/*———————————————————————————————————————— ▼ 20-48em · iPhone portrait */
+
+@media screen and ( min-width: 20em ) and ( max-width: 48em ){
+
+/*———————————————————————————————————————— logo bar */
+
+.site-branding{
+  padding-left:1.0rem;
+}
+
+.site-description{
+  display:none;
+}
+
+/*———————————————————————————————————————— nav bar */
+
+#site-navigation, .main-navigation{
+}
+
+/*———————————————————————————————————————— menu toggle button */
+
+#site-navigation button.menu-toggle{
+  background:none;
+  border:none;
+  color:var(--bright);
+  color:var(--bright);
+
+  font-family:Open Sans;
+  font-size:0.90rem;
+  font-weight:400;
+
+  margin-left:1.7rem;
+  padding:0.1rem 8rem 0.1rem 0rem;
+  height:2.4rem;
+}
+
+nav#site-navigation, /* hidden nav */
+nav.main-navigation{
+}
+
+nav#site-navigation.toggled{ /* visible nav */
+}
+
+/*———————————————————————————————————————— search in menu */
+
+nav#site-navigation .search-form{ display:none; }
+
+nav#site-navigation.toggled .search-form{ display:block;
+  margin-left:1.7rem;
+  margin-bottom:1.1rem;
+}
+
+/*———————————————————————————————————————— inactive */
+
+nav#site-navigation form.search-form input.search-field,
+#site-navigation .search-form .search-submit{
+  height:2.0rem;
+  display:inline-block;
+
+	border:1px solid var(--bright);
+  background-color:var(--dark-gray);
+	color:var(--bright);
+
+  font-family:Open Sans;
+  font-size:16px;
+  font-weight:400;
+}
+
+nav#site-navigation form.search-form input.search-field{
+	outline: none;
+  padding-left:0.5rem;
+  width:55%;
+}
+
+#site-navigation .search-form .search-submit{
+  margin:0;
+  margin-left:0.5rem;
+  padding:0 1rem;
+}
+
+#site-navigation .search-form .search-field::placeholder{
+	color:var(--dim);
+}
+
+/*———————————————————————————————————————— focused */
+
+#site-navigation .search-form .search-field:focus{
+	color:var(--dark-gray);
+  background-color:var(--bright);
+}
+
+#site-navigation .search-form .search-field:focus::placeholder{
+	color:var(--dim);
+}
+
+/* <form role="search" method="get" class="search-form" action="https://tech.svija.love/">
+       <label>
+           <span class="screen-reader-text">Search for:</span>
+           <input type="search" class="search-field" placeholder="Search &hellip;" value="svijax" name="s"/>
+       </label>
+       <input type="submit" class="search-submit" value="Search"/>
+   </form> */
+
+/*———————————————————————————————————————— nav links */
+
+nav#site-navigation div.menu-header-menu-container{
+/*	display:none; */
+  background-color:lime;
+}
+
+nav#site-navigation.toggled div.menu-header-menu-container{
+  border-top:1px dotted var(--bright);
+  margin-left:1.7rem;
+  margin-right:1.7rem;
+  padding-top:1.0rem;
+  padding-bottom:0.4rem;
+  display:block;
+  background-color:teal;
+}
+
+nav#site-navigation.toggled ul#primary-menu{
+  display:block;
+}
+
+nav#site-navigation.toggled ul#primary-menu li{
+  display:block;
+}
+
+.menu-item a:link,
+.menu-item a:visited,
+.menu-item a:hover{
+  height:2.20rem;
+  padding:0 0 0 1.7rem;
+  margin:0;
+}
+
+/*———————————————————————————————————————— sub menus */
+
+.menu-item ul.sub-menu{
+  display:none;
+}
+
+/*———————————————————————————————————————— main content */
+
+main#primary{
+  padding: 0.5rem 1.6rem;
+}
+
+/*———————————————————————————————————————— tables */
+
+figure.wp-block-table table td{
+  padding:6px 6px;
+}
+
+figure.wp-block-table table{
+  border:1px solid #0003;
+}
+
+/*———————————————————————————————————————— recent entries page */
+
+.wp-block-post-template.is-flex-container, .wp-block-query-loop.is-flex-container {
+  margin-left:0px;
+}
+
+/*———————————————————————————————————————— comment sign-in */
+
+/*orm action="https://tech.svija.love/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+    <p class="comment-notes">
+        <span id="email-notes">Your email address will not be published.</span>
+         Required fields are marked
+        <span class="required">*</span>
+    </p>
+    <p class="comment-form-comment">
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>
+    </p>
+    <p class="comment-form-author">
+        <label for="author">
+            Name
+            <span class="required">*</span>
+        </label>
+        <input id="author" name="author" type="text" value="Herman" size="30" maxlength="245" required='required'/>
+    </p>
+    <p class="comment-form-email">
+        <label for="email">
+            Email
+            <span class="required">*</span>
+        </label>
+        <input id="email" name="email" type="email" value="melville@whitewhale.com" size="30" maxlength="100" aria-describedby="email-notes" required='required'/>
+    </p>
+    <p class="comment-form-url">
+        <label for="url">Website</label>
+        <input id="url" name="url" type="url" value="http://whitewhale.com" size="30" maxlength="200"/>
+    </p>
+    <p class="comment-form-cookies-consent">
+        <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" checked="checked"/>
+        <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+    </p>
+    <p class="form-submit">
+        <input name="submit" type="submit" id="submit" class="submit" value="Post Comment"/>
+        <input type='hidden' name='comment_post_ID' value='152' id='comment_post_ID'/>
+        <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+    </p>
+</form> */
+
+form#commentform p.comment-form-author label,
+form#commentform p.comment-form-email label,
+form#commentform p.comment-form-url label{
+  font-size:0.92rem;
+  display:inline-block;
+}
+
+form#commentform p.comment-form-author input,
+form#commentform p.comment-form-email input,
+form#commentform p.comment-form-url input{
+  width:100%;
+  display:inline-block;
+  margin-bottom:0.5rem;
+}
+
+form#commentform p.comment-form-author{
+  margin-top:0.9rem;
+}
+
+form#commentform p.comment-form-url label{
+  padding-right:1.2rem;
+}
+
+form#commentform p.comment-form-cookies-consent{
+  margin-top:0.4rem;
+}
+
+/*———————————————————————————————————————— widget area */
+
+section.widget{
+  width:100%;
+}
+
+/*——————————————————————————————————————— ▲ end 20-48em */
+
+}
+
+/*———————————————————————————————————————— notes & info */
+
+/* what ?
+#post-11,
+.type-page,
+.status-publish,
+.hentry,
+#x{
+  margin:0;
+  padding:0;
+}
+
+.entry-content{
+  margin:0;
+  padding:0;
+}
+
+.wp-block-embed{
+  width:100%;
+  text-align:center;
+}
+*/
+
+/*———————————————————————————————————————— other media queries */
+
+@media screen and (min-width: 30em) { /* iPhone SE›8+ landscape */
+  /* #page{border:4px solid orange;} */
+}
+
+@media screen and (min-width: 48em) { /* iPad Mini & iPad portrait */
+  /* #page{border:4px solid yellow;} */
+}
+
+@media screen and ( min-width: 67em ) { /* iPad Pro portrait */
+  /* #page{border:4px solid lime;}  */
+}
+
+@media screen and ( min-width: 79em ) { /* 13" iPad Pro · 1366x768 and up */
+  /* #page{border:4px solid blue;}  */
+}
+
+@media screen and ( max-width: 48.875em ) and ( min-width: 48em ) {
+  /* #page{border:4px solid purple;} */
+}
+
+/*———————————————————————————————————————— body —— page structure */
+/* body ——— page structure
+    #page .site
+      #masthead .site-header
+        .site-branding
+          .custom-logo-link
+            .custom-logo
+          .site-title
+          .site-description
+        #site-navigation .main-navigation
+          .menu-toggle
+          .menu-menu-1-container
+            #primary-menu .menu
+              #menu-item-10 .menu-item .menu-item-type-custom    .menu-item-object-custom .menu-item-10
+                .sub-menu
+                  #menu-item-60 .menu-item .menu-item-type-custom .menu-item-object-custom .current-menu-item .menu-item-60
+              #menu-item-8  .menu-item .menu-item-type-post_type .menu-item-object-page   .menu-item-home .menu-item-8
+              #menu-item-60 .menu-item .menu-item-type-custom    .menu-item-object-custom .current-menu-item .menu-item-60
+              #menu-item-59 .menu-item .menu-item-type-custom    .menu-item-object-custom .menu-item-59
+              #menu-item-61 .menu-item .menu-item-type-custom    .menu-item-object-custom .menu-item-61
+
+      #primary .main
+
+      #secondary .widget-area
+        #search-2 .widget .widget_search
+          .widget-title
+        #recent-comments-2 .widget .widget_recent_comments
+        #archives-2 .widget .widget_archive
+        #categories-2 .widget .widget_categories
+        #meta-2 .widget .widget_meta
+
+      #colophon .site-footer
+        .site-info text .sep text
+
+menu w/children: .menu-item .menu-item-type-custom .menu-item-object-custom .current-menu-item .current-menu-ancestor .current-menu-parent .menu-item-has-children .menu-item-71"
+
+*/
+
+
+/*———————————————————————————————————————— fin */
