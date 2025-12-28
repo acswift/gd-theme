@@ -18,9 +18,19 @@
 				<?php printf( esc_html__( '%s', 'underscore-me' ), 'generatordata.net' ); ?>
 			</a>
 			<span class="sep"> | </span>
+			<a href="<?php echo esc_url( __( 'https://pxlnv.com/', 'theme' ) ); ?>">
+				<?php printf( esc_html__( '%s', 'underscore-me' ), 'theme' ); ?>
+			</a>
+			<span class="sep"> | </span>
+			<a href="<?php echo esc_url( __( '/site-map', 'site map' ) ); ?>">
+				<?php printf( esc_html__( '%s', 'underscore-me' ), 'site map' ); ?>
+			</a>
+			<span class="sep"> | </span>
 			<a href="<?php echo esc_url( __( 'https://llpowerservices.com', 'underscore-me' ) ); ?>">
 				<?php printf( esc_html__( '%s', 'underscore-me' ), 'llpowerservices.com' ); ?>
 			</a>
+			<span class="sep"> | </span>
+			<a href="javascript:alertMail();">contact us</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

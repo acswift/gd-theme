@@ -31,13 +31,18 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMPKKZT2TR"></script>
-  <script>                                        //                   ▲
-    window.dataLayer = window.dataLayer || [];    //                   ▲
-    function gtag(){dataLayer.push(arguments);}   //                   ▲
-    gtag('js', new Date());                       //                 also! 
-                                                  //                   ▲
-    gtag('config', 'G-MMPKKZT2TR');               //  tech: G-MMPKKZT2TR ▲ · blog: G-9RPFD6VPVV
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q88FGQDX51"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q88FGQDX51');
+
+    function alertMail(){
+      address = 'seurviuce@gueneratorduata.co'
+      alert(address.replaceAll('u','').replace('.co','.net'))
+    }
   </script>
 
 	<?php wp_head(); ?>

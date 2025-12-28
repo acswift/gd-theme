@@ -49,7 +49,6 @@
 
   /* same on both sites */
 
-  --h-tag:           red;
   --text:            rgb(40%, 40%, 40%);
   --text-bold:       rgb(20%, 20%, 20%);
   --gray-text:       rgb(50%, 50%, 50%);
@@ -74,13 +73,13 @@
   --postedOnColor         : #999;
   --bodyColor             : #333;
   --siteDescColor         : #999;
-  --hxColor               : red;
+  --hxColor               : var(--light-gray);
 
-  --siteBranding          :             rgb( 50%,   0%,  38%);
-  --siteBrandingBg        :             white;
-  --siteNavBg             :                   white;
-  --siteNavLinkColor      :#555;
-  --siteNavLinkActiveColor:red;
+  --siteBranding          : rgb( 50%,   0%,  38%);
+  --siteBrandingBg        : white;
+  --siteNavBg             : white;
+  --siteNavLinkColor      : #555;
+  --siteNavLinkActiveColor: red;
 
   --dividerColor          : #0004;
 }
@@ -187,7 +186,7 @@
 :root{
   --postedOnFont: 300 0.8em "IBM Plex Mono";
   --bodyFont    : 400 1.0em "IBM Plex Sans";
-  --siteDescFont: 400 0.8em "IBM Plex Sans";
+  --siteDescFont: 400 0.8em "IBM Plex Mono";
   --siteNavFont : 400 0.9em "IBM Plex Mono";
   --hxFont      : 700 1.0em "IBM Plex Sans";
 }
@@ -259,12 +258,13 @@ input[type="search"] { /* turn off automatic iPhone rounding */
   transform:scale(1.1);
 }
 
-.site-description{
+.site-description{ /* site title<br>site description */
   font:var(--siteDescFont);
   color:var(--siteDescColor);
 
   line-height: 1.27rem;
   text-transform: uppercase;
+  letter-spacing:0.1em;
 }
 
 .site-title{ /* p tag containing site title in link */
@@ -308,6 +308,10 @@ input[type="search"] { /* turn off automatic iPhone rounding */
 /**/
 /*———————————————————————————————————————— main content */
 
+h1.entry-title{ /* because of HTML sitemap, which lists pages by title */
+  display:none;
+}
+
 span.posted-on, span.byline{
   font:var(--postedOnFont);
   text-transform:uppercase;
@@ -329,7 +333,7 @@ main#primary{
 }
 
 header.entry-header h1.entry-title{
-	color:var(--h-tag);
+	color:var(--hXcolor);
   margin:1.0rem 0 0.6rem 0;
 	font-size:2.1rem;
   line-height:2.6rem;
@@ -376,7 +380,7 @@ header.entry-header{
 /*———————————————————————————————————————— h tags */
 
 .site-main h1{
-	color:var(--h-tag);
+	color:var(--hXcolor);
   margin:1.0rem 0 0.6rem 0;
 	font-size:2.1rem;
   line-height:2.6rem;
@@ -384,21 +388,21 @@ header.entry-header{
 }
 
 .site-main h2{
-	color:var(--h-tag);
+	color:var(--hXcolor);
   margin:1.0rem 0 0.6rem 0;
 	font-size:1.3rem;
 	font-weight:600;
 }
 
 .site-main h3{
-	color:var(--h-tag);
+	color:var(--hXcolor);
   margin:1.0rem 0 0.6rem 0;
 	font-size:1.5rem;
 	font-weight:600;
 }
 
 .site-main h4{
-	color:var(--h-tag);
+	color:var(--hXcolor);
   margin:0.8rem 0 0 0;
 	font-size:1.2rem;
 	font-weight:600;
@@ -717,7 +721,7 @@ h2.comments-title{
 }
 
 h2.comments-title span{
-  color:var(--h-tag);
+  color:var(--hXcolor);
 }
 
 p.logged-in-as{
