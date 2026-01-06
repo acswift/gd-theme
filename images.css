@@ -1,0 +1,99 @@
+
+/* vim: set foldmethod=marker fmr=/*—,/**\/ :*/
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: images.css
+
+    images are in figure tages:
+
+    <figure class="wp-block-image size-large">
+      <img decoding="async" width="1024" height="576" src="https://...
+
+    or size-large, or size-medium or size-thumbnail
+
+*/
+/*———————————————————————————————————————— featured image in post
+
+    shows only on recent entries page */
+
+/* header.entry-header div.post-thumbnail img.wp-post-image{*/
+div.post-thumbnail img.wp-post-image{
+  display:none;
+}
+/**/
+/*———————————————————————————————————————— default images */
+
+figure {
+	margin: 1em auto !important;
+}
+
+figure.wp-block-image{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+figure.wp-block-image img{ /* all images are retina resolution */
+  zoom:0.5;
+  border-radius:10px;
+  border:0.5px solid #0004;
+  box-shadow:0px 10px 40px #00000028;
+}
+
+/* .wp-block-image.wp-block-image{
+/*  width:100%;
+  text-align:center
+};*/
+/**/
+/*———————————————————————————————————————— custom image layouts */
+
+figure.white img{ /* for images with a white background */
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+}
+
+.retina{
+  margin:1.3rem 0 1.1rem 0;
+}
+
+.shadow{ /* 20px white space over · 30px white space under */
+  margin-top:-0.5rem;
+  margin-bottom:-1.4rem;
+}
+
+figure.drop img{
+  border-radius:10px !important;
+  border:0.5px solid #0004;
+  box-shadow:0px 10px 40px #00000028;
+}
+
+figure.mac img{
+  border-radius:20px !important;
+  border:0.5px solid #0004;
+  box-shadow:0px 10px 40px #00000028;
+  margin:0.1rem 0 0.1rem 0;
+}
+
+figure.panel img{
+  border-radius:10px 10px 0px 0px !important;
+  border:none;
+  box-shadow:0px 10px 40px #00000028;
+  margin:0.1rem 0 0.1rem 0;
+}
+
+.wp-block-image.left{
+  text-align:left;
+}
+/**/
+/*———————————————————————————————————————— image captions */
+
+figure.wp-block-image figcaption{
+  font-weight:300;
+  font-style:italic;
+  text-align:center;
+  font-size:16px;
+	color:var(--link-alt);
+}
+
+/*:::::::::::::::::::::::::::::::::::::::: fin */
+

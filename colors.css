@@ -1,0 +1,104 @@
+
+/* vim: set foldmethod=marker fmr=/*—,/**\/ :*/
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: colors.css
+
+    https://austingil.com/css-named-colors/ */
+
+/*———————————————————————————————————————— colors
+
+    see palette definitions in functions.php */
+
+:root {
+
+  --bright:          rgb(100%,   0%,  75%); /* blog */
+  --bright:          color(display-p3 1.00 0.00 0.75); /* blog */
+
+  --dim:             rgb( 50%,   0%,  38%);
+  --dim:             color(display-p3 0.50 0.00 0.38);
+
+  --dark-gray:       rgb( 16%,  20%,  25%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  --bright:          rgb( 75%, 100%,   0%); /* tech */
+  --bright:          color(display-p3 0.75 1.00 0.00); /* tech */
+
+  --dim:             rgb( 38%,  50%,   0%);
+  --dim:             color(display-p3 0.38 0.50 0.00);
+
+  --dark-gray:       rgb( 20%,  20%,  20%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  --bright:          rgb(100%,   0%,  75%); /* blog */
+  --dim:             rgb( 50%,   0%,  38%);
+  --dark-gray:       rgb( 16%,  20%,  25%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  --bright:          rgb( 75%, 100%,   0%); /* tech */
+  --dim:             rgb( 38%,  50%,   0%);
+  --dark-gray:       rgb( 20%,  20%,  20%);
+  --light-gray:      rgb( 70%,  70%,  70%);
+
+  /* same on both sites */
+
+  --text:            rgb(40%, 40%, 40%);
+  --text-bold:       rgb(20%, 20%, 20%);
+  --gray-text:       rgb(50%, 50%, 50%);
+
+  --nav-link:        rgb(70%, 70%, 70%);
+  --nav-link-active: rgb(99%, 99%, 99%);
+
+  --link:            rgb(41%, 49%, 73%);
+  --link-alt:        rgb(74%, 25%, 40%);
+
+  --link-active:     rgb(74%, 25%, 40%);
+  --link-active:     color(display-p3 0.74 0.25 0.40);
+
+  --link-alt-active: rgb( 8%, 30%, 96%);
+  --link-alt-active: color(display-p3 0.09 0.32 1.00);
+
+}
+/**/
+/*———————————————————————————————————————— color variables */
+
+:root{
+  --postedOnColor         : #999;
+  --bodyColor             : #333;
+  --siteDescColor         : #999;
+  --hxColor               : var(--light-gray);
+
+  --siteBranding          : rgb( 50%,   0%,  38%);
+  --siteBrandingBg        : white;
+  --siteNavBg             : white;
+  --siteNavLinkColor      : #555;
+  --siteNavLinkActiveColor: red;
+
+  --dividerColor          : #0004;
+  --codeColor             : steelBlue;
+}
+
+/**/
+/*———————————————————————————————————————— inline colors
+
+    must match custom colors in functions.php */
+
+.has-red-color            {color: rgb(100%,   0%,   0%) !important; }
+.has-dark-gray-color      {color: rgb( 20%,  20%,  20%) !important; }
+.has-light-gray-color     {color: rgb( 70%,  70%,  70%) !important; }
+  
+.has-bright-tech-color    {color: rgb( 75%, 100%,   0%) !important; }
+.has-bright-blog-color    {color: rgb(100%,   0%,  75%) !important; }
+.has-dim-tech-color       {color: rgb( 38%,  50%,   0%) !important; }
+.has-dim-blog-color       {color: rgb( 50%,   0%,  38%) !important; }
+  
+.has-h-tag-color          {color: rgb( 41%,  49%,  73%) !important; }
+  
+.has-link-color           {color: rgb( 41%,  49%,  73%) !important; }
+.has-link-active-color    {color: rgb( 74%,  25%,  40%) !important; }
+.has-link-alt-color       {color: rgb( 74%,  25%,  40%) !important; }
+.has-link-alt-active-color{color: rgb(  8%,  30%,  96%) !important; }
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: fin */
+

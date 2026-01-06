@@ -1,0 +1,96 @@
+
+/* vim: set foldmethod=marker fmr=/*—,/**\/ :*/
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: fonts.css */
+
+
+/*———————————————————————————————————————— font faces */
+
+/* Rajdhani is handled with google font API in header.php */
+
+@font-face {
+  font-family:'Bookerly';
+  font-weight:300;
+  font-style:normal;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Light.woff') format('woff');
+ }
+
+@font-face {
+  font-family:'Bookerly';
+  font-weight:300;
+  font-style:italic;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Light-Italic.woff') format('woff');
+ }
+
+@font-face {
+  font-family:'Bookerly';
+  font-weight:400;
+  font-style:normal;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly.woff') format('woff');
+ }
+
+@font-face {
+  font-family:'Bookerly';
+  font-weight:400;
+  font-style:italic;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Italic.woff') format('woff');
+ }
+
+@font-face {
+  font-family:'Bookerly-Bold';
+  font-weight:700;
+  font-style:normal;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Bold.woff') format('woff');
+ }
+
+@font-face {
+  font-family:'Bookerly-Bold';
+  font-weight:700;
+  font-style:italic;
+  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Bold-Italic.woff') format('woff');
+ }
+
+/* Also uploaded:
+
+  Montserrat-BlackItalic.woff
+  Montserrat-Black.woff
+  Montserrat-BoldItalic.woff
+  Montserrat-Bold.woff
+  Montserrat-ExtraBoldItalic.woff
+  Montserrat-ExtraBold.woff
+  Montserrat-ExtraLightItalic.woff
+  Montserrat-ExtraLight.woff
+  Montserrat-Italic.woff
+  Montserrat-LightItalic.woff
+  Montserrat-Light.woff
+  Montserrat-MediumItalic.woff
+  Montserrat-Medium.woff
+  Montserrat-Regular.woff
+  Montserrat-SemiBoldItalic.woff
+  Montserrat-SemiBold.woff
+  Montserrat-ThinItalic.woff
+  Montserrat-Thin.woff
+
+
+  Bookerly-Display-Bold-Italic.woff
+  Bookerly-Display-Bold.woff*
+  Bookerly-Display-Italic.woff*
+  Bookerly-Display.woff*
+  Bookerly-LCD-Italic.woff*
+  Bookerly-LCD-Light-Italic.woff*
+
+/**/
+/*———————————————————————————————————————— font variables - matches color variables */
+
+:root{
+  --postedOnFont: 300 0.8em "IBM Plex Mono";
+  --bodyFont    : 400 1.0em "IBM Plex Sans";
+  --siteDescFont: 400 0.8em "IBM Plex Mono";
+  --siteNavFont : 400 0.9em "IBM Plex Mono";
+  --hxFont      : 700 1.0em "IBM Plex Sans";
+}
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: fin */
+

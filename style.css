@@ -2,7 +2,11 @@
 /* vim: set foldmethod=marker fmr=/*—,/**\/ :*/
 /**/
 
-/*:::::::::::::::::::::::::::::::::::::::: gd-theme style.css */
+/*:::::::::::::::::::::::::::::::::::::::: style.css */
+
+@import url("fonts.css");
+@import url("colors.css");
+@import url("images.css");
 
 /*———————————————————————————————————————— theme info
 
@@ -12,184 +16,6 @@
   Template:     underscore-me
   Version:      1.0.0
 
-/**/
-/*———————————————————————————————————————— colors
-
-    see palette definitions in functions.php */
-
-:root {
-
-  --bright:          rgb(100%,   0%,  75%); /* blog */
-  --bright:          color(display-p3 1.00 0.00 0.75); /* blog */
-
-  --dim:             rgb( 50%,   0%,  38%);
-  --dim:             color(display-p3 0.50 0.00 0.38);
-
-  --dark-gray:       rgb( 16%,  20%,  25%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  --bright:          rgb( 75%, 100%,   0%); /* tech */
-  --bright:          color(display-p3 0.75 1.00 0.00); /* tech */
-
-  --dim:             rgb( 38%,  50%,   0%);
-  --dim:             color(display-p3 0.38 0.50 0.00);
-
-  --dark-gray:       rgb( 20%,  20%,  20%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  --bright:          rgb(100%,   0%,  75%); /* blog */
-  --dim:             rgb( 50%,   0%,  38%);
-  --dark-gray:       rgb( 16%,  20%,  25%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  --bright:          rgb( 75%, 100%,   0%); /* tech */
-  --dim:             rgb( 38%,  50%,   0%);
-  --dark-gray:       rgb( 20%,  20%,  20%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  /* same on both sites */
-
-  --text:            rgb(40%, 40%, 40%);
-  --text-bold:       rgb(20%, 20%, 20%);
-  --gray-text:       rgb(50%, 50%, 50%);
-
-  --nav-link:        rgb(70%, 70%, 70%);
-  --nav-link-active: rgb(99%, 99%, 99%);
-
-  --link:            rgb(41%, 49%, 73%);
-  --link-alt:        rgb(74%, 25%, 40%);
-
-  --link-active:     rgb(74%, 25%, 40%);
-  --link-active:     color(display-p3 0.74 0.25 0.40);
-
-  --link-alt-active: rgb( 8%, 30%, 96%);
-  --link-alt-active: color(display-p3 0.09 0.32 1.00);
-
-}
-/**/
-/*———————————————————————————————————————— color variables */
-
-:root{
-  --postedOnColor         : #999;
-  --bodyColor             : #333;
-  --siteDescColor         : #999;
-  --hxColor               : var(--light-gray);
-
-  --siteBranding          : rgb( 50%,   0%,  38%);
-  --siteBrandingBg        : white;
-  --siteNavBg             : white;
-  --siteNavLinkColor      : #555;
-  --siteNavLinkActiveColor: red;
-
-  --dividerColor          : #0004;
-}
-
-/**/
-/*———————————————————————————————————————— inline colors
-
-    must match custom colors in functions.php */
-
-.has-red-color            {color: rgb(100%,   0%,   0%) !important; }
-.has-dark-gray-color      {color: rgb( 20%,  20%,  20%) !important; }
-.has-light-gray-color     {color: rgb( 70%,  70%,  70%) !important; }
-  
-.has-bright-tech-color    {color: rgb( 75%, 100%,   0%) !important; }
-.has-bright-blog-color    {color: rgb(100%,   0%,  75%) !important; }
-.has-dim-tech-color       {color: rgb( 38%,  50%,   0%) !important; }
-.has-dim-blog-color       {color: rgb( 50%,   0%,  38%) !important; }
-  
-.has-h-tag-color          {color: rgb( 41%,  49%,  73%) !important; }
-  
-.has-link-color           {color: rgb( 41%,  49%,  73%) !important; }
-.has-link-active-color    {color: rgb( 74%,  25%,  40%) !important; }
-.has-link-alt-color       {color: rgb( 74%,  25%,  40%) !important; }
-.has-link-alt-active-color{color: rgb(  8%,  30%,  96%) !important; }
-/**/
-/*———————————————————————————————————————— font faces */
-
-/* Rajdhani is handled with google font API in header.php */
-
-@font-face {
-  font-family:'Bookerly';
-  font-weight:300;
-  font-style:normal;
-  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Light.woff') format('woff');
- }
-
-@font-face {
-  font-family:'Bookerly';
-  font-weight:300;
-  font-style:italic;
-  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Light-Italic.woff') format('woff');
- }
-
-@font-face {
-  font-family:'Bookerly';
-  font-weight:400;
-  font-style:normal;
-  src:url('/wp-content/themes/gd-theme/fonts/Bookerly.woff') format('woff');
- }
-
-@font-face {
-  font-family:'Bookerly';
-  font-weight:400;
-  font-style:italic;
-  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Italic.woff') format('woff');
- }
-
-@font-face {
-  font-family:'Bookerly-Bold';
-  font-weight:700;
-  font-style:normal;
-  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Bold.woff') format('woff');
- }
-
-@font-face {
-  font-family:'Bookerly-Bold';
-  font-weight:700;
-  font-style:italic;
-  src:url('/wp-content/themes/gd-theme/fonts/Bookerly-Bold-Italic.woff') format('woff');
- }
-
-/* Also uploaded:
-
-  Montserrat-BlackItalic.woff
-  Montserrat-Black.woff
-  Montserrat-BoldItalic.woff
-  Montserrat-Bold.woff
-  Montserrat-ExtraBoldItalic.woff
-  Montserrat-ExtraBold.woff
-  Montserrat-ExtraLightItalic.woff
-  Montserrat-ExtraLight.woff
-  Montserrat-Italic.woff
-  Montserrat-LightItalic.woff
-  Montserrat-Light.woff
-  Montserrat-MediumItalic.woff
-  Montserrat-Medium.woff
-  Montserrat-Regular.woff
-  Montserrat-SemiBoldItalic.woff
-  Montserrat-SemiBold.woff
-  Montserrat-ThinItalic.woff
-  Montserrat-Thin.woff
-
-
-  Bookerly-Display-Bold-Italic.woff
-  Bookerly-Display-Bold.woff*
-  Bookerly-Display-Italic.woff*
-  Bookerly-Display.woff*
-  Bookerly-LCD-Italic.woff*
-  Bookerly-LCD-Light-Italic.woff*
-
-/**/
-/*———————————————————————————————————————— font variables - matches color variables */
-
-:root{
-  --postedOnFont: 300 0.8em "IBM Plex Mono";
-  --bodyFont    : 400 1.0em "IBM Plex Sans";
-  --siteDescFont: 400 0.8em "IBM Plex Mono";
-  --siteNavFont : 400 0.9em "IBM Plex Mono";
-  --hxFont      : 700 1.0em "IBM Plex Sans";
-}
 /**/
 /*———————————————————————————————————————— defaults */
 
@@ -362,15 +188,6 @@ main#primary a:hover, main#primary a:active{
   font-size:0.8rem;
 }
 /**/
-/*———————————————————————————————————————— featured image in post
-
-    shows only on recent entries page */
-
-/* header.entry-header div.post-thumbnail img.wp-post-image{*/
-div.post-thumbnail img.wp-post-image{
-  display:none;
-}
-/**/
 /*———————————————————————————————————————— entry header */
 
 header.entry-header{
@@ -424,7 +241,7 @@ header.entry-header{
   color:var(--link-alt-active) !important;
 }
 /**/
-/*———————————————————————————————————————— hr, strong & p */
+/*———————————————————————————————————————— hr, strong & p  & code */
 
 main.site-main article.page div.entry-content hr.wp-block-separator,
 main.site-main article.post div.entry-content hr.wp-block-separator{
@@ -445,6 +262,10 @@ main.site-main article.post div.entry-content hr.wp-block-separator{
 .site-main strong{
 	font-weight:600;
   color:var(--text-bold);
+}
+
+code{
+  color:var(--codeColor);
 }
 /**/
 /*———————————————————————————————————————— lists */
@@ -533,51 +354,9 @@ pre{
   margin:1.3rem 0;
 }
 /**/
-/*———————————————————————————————————————— images */
-
-.wp-block-image.wp-block-image{
-  width:100%;
-  text-align:center;
-}
-
-.retina{
-  zoom:0.5;
-  margin:1.3rem 0 1.1rem 0;
-}
-
-.shadow{ /* 20px white space over · 30px white space under */
-  margin-top:-0.5rem;
-  margin-bottom:-1.4rem;
-}
-
-figure.drop img{
-  border-radius:10px !important;
-  border:0.5px solid #0004;
-  box-shadow:0px 10px 40px #00000028;
-}
-
-figure.mac img{
-  border-radius:20px !important;
-  border:0.5px solid #0004;
-  box-shadow:0px 10px 40px #00000028;
-  margin:0.1rem 0 0.1rem 0;
-}
-
-figure.panel img{
-  border-radius:10px 10px 0px 0px !important;
-  border:none;
-  box-shadow:0px 10px 40px #00000028;
-  margin:0.1rem 0 0.1rem 0;
-}
-
-.wp-block-image.left{
-  text-align:left;
-}
-/**/
 /*———————————————————————————————————————— image & table captions */
 
-figure.wp-block-table figcaption,
-figure.wp-block-image figcaption{
+figure.wp-block-table figcaption{
   font-weight:300;
   font-style:italic;
   text-align:center;
@@ -1198,12 +977,6 @@ li.recentcomments a:active{
 main#primary{
   padding: 1.5rem 3rem 0rem 3rem;
   max-width:1000px;
-}
-/**/
-/*———————————————————————————————————————— image & table captions */
-figure.wp-block-image figcaption{
-  height:200%;
-  font-size:200%;
 }
 /**/
 /*———————————————————————————————————————— tables */
