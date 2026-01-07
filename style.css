@@ -138,20 +138,22 @@ h1.entry-title{ /* because of HTML sitemap, which lists pages by title */
   display:none;
 }
 
-span.posted-on, span.byline{
+span.posted-on{
   font:var(--postedOnFont);
   text-transform:uppercase;
   letter-spacing:0.1em;
 }
 
-span.posted-on, span.posted-on a:link, span.posted-on a:visited,
-span.byline, span.byline a:link, span.byline a:visited{
+span.posted-on, span.posted-on a:link, span.posted-on a:visited{
   color:var(--postedOnColor);
 }
 
-span.posted-on a:hover, span.posted-on a:active,
-span.byline a:hover, span.byline a:active{
+span.posted-on a:hover, span.posted-on a:active{
 color:red;
+}
+
+span.byline{ /* who posted */
+  display:none;
 }
 
 main#primary{
@@ -835,10 +837,10 @@ li.recentcomments a:active{
   color:var(--link-active);
 }
 /**/
-/*———————————————————————————————————————— footer */
+/*———————————————————————————————————————— actual footer */
 
-#colophon, .site-footer {
-  background-color:var(--dark-gray);
+footer#colophon, footer.site-footer {
+  background-color:var(--siteFooter);
   margin:0;
   height:1.9rem;
 }

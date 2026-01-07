@@ -4,8 +4,15 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: colors.css
 
+    https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/
     https://austingil.com/css-named-colors/ */
 
+/*———————————————————————————————————————— missing css colors */
+
+:root {
+  --charcoal:rgb( 20%,  20%,  20%);
+}
+/**/
 /*———————————————————————————————————————— colors
 
     see palette definitions in functions.php */
@@ -76,6 +83,8 @@
 
   --dividerColor          : #0004;
   --codeColor             : steelBlue;
+
+  --siteFooterBg          : var(--charcoal);
 }
 
 /**/
