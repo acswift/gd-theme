@@ -4,6 +4,16 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: fonts.css */
 
+/*
+
+shorthand font syntax (order matters):
+
+font-style
+font-variant
+font-weight
+font-stretch
+font-size/line-height
+font-family  */
 
 /*———————————————————————————————————————— font faces */
 
@@ -89,6 +99,8 @@
   --siteDescFont: 400 0.8em "IBM Plex Mono";
   --siteNavFont : 400 0.9em "IBM Plex Mono";
   --hxFont      : 700 1.0em "IBM Plex Sans";
+  --footerFont  : 300 1.0em/2.4em "IBM Plex Sans";
+  --captionFont : italic 300 1.0em/2.4em "IBM Plex Sans";
 }
 /**/
 

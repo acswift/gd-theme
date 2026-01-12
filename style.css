@@ -2,6 +2,16 @@
 /* vim: set foldmethod=marker fmr=/*—,/**\/ :*/
 /**/
 
+/*
+
+    generally speaking, variables and @import are used as much as possible
+
+    every element should have corresponding variables with:
+    • font
+    • color
+    • background color
+/*/
+
 /*:::::::::::::::::::::::::::::::::::::::: style.css */
 
 @import url("fonts.css");
@@ -356,7 +366,7 @@ pre{
   margin:1.3rem 0;
 }
 /**/
-/*———————————————————————————————————————— image & table captions */
+/*———————————————————————————————————————— table captions */
 
 figure.wp-block-table figcaption{
   font-weight:300;
@@ -839,29 +849,28 @@ li.recentcomments a:active{
 /**/
 /*———————————————————————————————————————— actual footer */
 
-footer#colophon, footer.site-footer {
-  background-color:var(--siteFooter);
-  margin:0;
-  height:1.9rem;
-}
+/* colophon: a brief statement, usually at the end of a book or document,
+giving information about its production (printer, publisher, place, date,
+typeface, paper, etc.). */
 
-.site-info{ /* bar at very bottom */
-  padding-top:0.4rem;
-  color:var(--gray-text);
+footer#colophon{} /* contains site-footer */
+
+div.site-info{ /* bar at very bottom */
+  margin:3rem 0 0 0;
+  height:2.5rem;
   text-align:center;
-  font-size:0.8rem;
+
+              font:var(--footerFont);
+             color:var(--siteFooter);
+  background-color:var(--siteFooterBg);
 }
 
-.site-info a:link,
-.site-info a:visited,
-#x{
+div.site-info a:link, div.site-info a:visited{
   color:var(--light-gray);
   text-decoration:none;
 }
 
-.site-info a:hover,
-.site-info a:active,
-#x{
+div.site-info a:hover, div.site-info a:active{
   color:white;
 }
 /**/

@@ -4,45 +4,15 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: colors.css
 
-    https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/
-    https://austingil.com/css-named-colors/ */
+    https://enes.in/sorted-colors/   */
 
-/*———————————————————————————————————————— missing css colors */
-
-:root {
-  --charcoal:rgb( 20%,  20%,  20%);
-}
-/**/
-/*———————————————————————————————————————— colors
+/*———————————————————————————————————————— colors from blog & tech
 
     see palette definitions in functions.php */
 
 :root {
 
-  --bright:          rgb(100%,   0%,  75%); /* blog */
-  --bright:          color(display-p3 1.00 0.00 0.75); /* blog */
-
-  --dim:             rgb( 50%,   0%,  38%);
-  --dim:             color(display-p3 0.50 0.00 0.38);
-
-  --dark-gray:       rgb( 16%,  20%,  25%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  --bright:          rgb( 75%, 100%,   0%); /* tech */
-  --bright:          color(display-p3 0.75 1.00 0.00); /* tech */
-
-  --dim:             rgb( 38%,  50%,   0%);
-  --dim:             color(display-p3 0.38 0.50 0.00);
-
-  --dark-gray:       rgb( 20%,  20%,  20%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  --bright:          rgb(100%,   0%,  75%); /* blog */
-  --dim:             rgb( 50%,   0%,  38%);
-  --dark-gray:       rgb( 16%,  20%,  25%);
-  --light-gray:      rgb( 70%,  70%,  70%);
-
-  --bright:          rgb( 75%, 100%,   0%); /* tech */
+  --bright:          rgb( 75%, 100%,   0%);
   --dim:             rgb( 38%,  50%,   0%);
   --dark-gray:       rgb( 20%,  20%,  20%);
   --light-gray:      rgb( 70%,  70%,  70%);
@@ -51,7 +21,6 @@
 
   --text:            rgb(40%, 40%, 40%);
   --text-bold:       rgb(20%, 20%, 20%);
-  --gray-text:       rgb(50%, 50%, 50%);
 
   --nav-link:        rgb(70%, 70%, 70%);
   --nav-link-active: rgb(99%, 99%, 99%);
@@ -67,7 +36,14 @@
 
 }
 /**/
-/*———————————————————————————————————————— color variables */
+/*———————————————————————————————————————— missing css colors */
+
+:root {
+  --charcoal:rgb( 20%,  20%,  20%);
+  --darkergrey:hsl(0, 0%, 40%);
+}
+/**/
+/*———————————————————————————————————————— color variables named for IDs & classes */
 
 :root{
   --postedOnColor         : #999;
@@ -84,11 +60,13 @@
   --dividerColor          : #0004;
   --codeColor             : steelBlue;
 
+  --siteFooterBg          : grey;
   --siteFooterBg          : var(--charcoal);
+  --imageCaption          : var(--darkergrey);
 }
 
 /**/
-/*———————————————————————————————————————— inline colors
+/*———————————————————————————————————————— inline colors RESEARCH NEEDED
 
     must match custom colors in functions.php */
 

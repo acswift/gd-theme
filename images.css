@@ -23,19 +23,16 @@ div.post-thumbnail img.wp-post-image{
 /**/
 /*———————————————————————————————————————— default images */
 
-figure {
-	margin: 1em auto !important;
-}
-
-figure.wp-block-image{
-  margin-left:auto !important;
-  margin-right:auto !important;
+figure.wp-block-image.size-large{
+  width:100%;
+  text-align:center;
+  margin:1.4em 0 0.1em 0;
 }
 
 figure.wp-block-image img{ /* all images are retina resolution */
   zoom:0.5;
   border-radius:10px;
-  border:0.5px solid #0004;
+  border:0.5px solid #0009;
   box-shadow:0px 10px 40px #00000028;
 }
 
@@ -88,11 +85,11 @@ figure.panel img{
 /*———————————————————————————————————————— image captions */
 
 figure.wp-block-image figcaption{
-  font-weight:300;
-  font-style:italic;
+  margin:0;
+  padding:0;
   text-align:center;
-  font-size:16px;
-	color:var(--link-alt);
+	color:var(--imageCaption);
+   font:var(--captionFont);
 }
 
 /*:::::::::::::::::::::::::::::::::::::::: fin */
