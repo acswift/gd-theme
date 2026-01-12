@@ -1,6 +1,6 @@
 <?php
 
-// ———————————————————————————————————————— custom css
+//———————————————————————————————————————— custom css
 
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
@@ -17,14 +17,14 @@ function my_theme_enqueue_styles() {
 //  );
 }
 
-// ———————————————————————————————————————— custom text
+//———————————————————————————————————————— custom text
 // Load translation files from your child theme instead of the parent theme
 function my_child_theme_locale() {
     load_child_theme_textdomain( 'underscore-me', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'my_child_theme_locale' );
 
-// ———————————————————————————————————————— custom color palette 
+//———————————————————————————————————————— custom color palette 
 
 function mytheme_setup_theme_supported_features() {
 
@@ -98,11 +98,11 @@ function mytheme_setup_theme_supported_features() {
 
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 
-// ———————————————————————————————————————— excerpts for pages
+//———————————————————————————————————————— excerpts for pages
 
 add_post_type_support( 'page', 'excerpt' );
 
-// ———————————————————————————————————————— change "Leave a Reply"
+//———————————————————————————————————————— change "Leave a Reply"
 
 add_filter('comment_form_defaults', 'ocean_custom_comment_title', 20);
 function ocean_custom_comment_title( $defaults ){
@@ -110,9 +110,66 @@ function ocean_custom_comment_title( $defaults ){
   return $defaults;
 }
 
-// ———————————————————————————————————————— excerpts for pages
+//———————————————————————————————————————— excerpts for pages
 
 add_post_type_support( 'page', 'excerpt' );
 
+/*———————————————————————————————————————— include pages in RSS feed
 
-// ———————————————————————————————————————— fin
+   added by claud code */
+
+function add_pages_to_rss_feed($query) {
+    if ($query->is_feed() && $query->is_main_query()) {
+        $query->set('post_type', array('post', 'page'));
+
+        // Exclude structural pages (front page, privacy policy, etc.)
+        $excluded_ids = array();
+
+        $front_page_id = get_option('page_on_front');
+        if ($front_page_id) {
+            $excluded_ids[] = $front_page_id;
+        }
+
+        $privacy_page_id = get_option('wp_page_for_privacy_policy');
+        if ($privacy_page_id) {
+            $excluded_ids[] = $privacy_page_id;
+        }
+
+        if (!empty($excluded_ids)) {
+            $query->set('post__not_in', $excluded_ids);
+        }
+    }
+}
+add_action('pre_get_posts', 'add_pages_to_rss_feed');
+
+// Force full content in RSS feed (helps Feedly recognize items)
+function full_content_rss($content) {
+    global $post;
+    if (is_feed() && $post->post_type === 'page') {
+        return apply_filters('the_content', $post->post_content);
+    }
+    return $content;
+}
+add_filter('the_excerpt_rss', 'full_content_rss');
+add_filter('the_content_feed', 'full_content_rss');
+
+// Add category to pages in RSS feed (required by some feed readers)
+function add_category_to_pages_rss($rss_item) {
+    global $post;
+    if ($post->post_type === 'page') {
+        echo '<category><![CDATA[Articles]]></category>' . "\n";
+    }
+}
+add_action('rss2_item', 'add_category_to_pages_rss');
+
+// Make page guids look like post guids
+function modify_page_guid_for_feed($guid, $post_id) {
+    $post = get_post($post_id);
+    if (is_feed() && $post && $post->post_type === 'page') {
+        return get_permalink($post_id);
+    }
+    return $guid;
+}
+add_filter('get_the_guid', 'modify_page_guid_for_feed', 10, 2);
+
+//———————————————————————————————————————— fin
