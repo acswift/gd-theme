@@ -31,6 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script       src="/wp-content/themes/gd-theme/utilities.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q88FGQDX51"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -38,20 +39,6 @@
     gtag('js', new Date());
 
     gtag('config', 'G-Q88FGQDX51');
-
-    let emailAddress = 'seurviuce@gueneratorduata.co'
-    let replaceChar  = 'u'
-    let replaceTld   = '.net'
-
-    function alertMail(){
-      alert(emailAddress.replaceAll(replaceChar,'').replace('.co',replaceTld))
-    }
-
-    function sendMail(emailSubject, emailBody){
-      let str = 'mailto:' + emailAddress.replaceAll(replaceChar,'').replace('.co',replaceTld)
-      str    += '?subject=' + emailSubject + '&body=' + emailBody
-      location.href = str
-    }
 
   </script>
 
