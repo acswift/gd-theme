@@ -39,10 +39,20 @@
 
     gtag('config', 'G-Q88FGQDX51');
 
+    let emailAddress = 'seurviuce@gueneratorduata.co'
+    let replaceChar  = 'u'
+    let replaceTld   = '.net'
+
     function alertMail(){
-      address = 'seurviuce@gueneratorduata.co'
-      alert(address.replaceAll('u','').replace('.co','.net'))
+      alert(emailAddress.replaceAll(replaceChar,'').replace('.co',replaceTld))
     }
+
+    function sendMail(emailSubject, emailBody){
+      let str = 'mailto:' + emailAddress.replaceAll(replaceChar,'').replace('.co',replaceTld)
+      str    += '?subject=' + emailSubject + '&body=' + emailBody
+      location.href = str
+    }
+
   </script>
 
 	<?php wp_head(); ?>
