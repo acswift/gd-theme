@@ -17,6 +17,7 @@
 @import url("fonts.css");
 @import url("colors.css");
 @import url("images.css");
+@import url("classes.css");
 
 /*———————————————————————————————————————— theme info
 
@@ -166,7 +167,7 @@ span.byline{ /* who posted */
   display:none;
 }
 
-main#primary{
+main{
   margin: 0 auto;
 }
 
@@ -178,12 +179,12 @@ header.entry-header h1.entry-title{
 	font-weight:600;
 }
 
-/*main#primary a:link, main#primary a:visited{
+/*main a:link, main a:visited{
   color:var(--link);
   text-decoration:none;
 }*/
 
-main#primary a:hover, main#primary a:active{
+main a:hover, main a:active{
   color:var(--link-active);
 }
 /**/
@@ -985,7 +986,7 @@ div.site-info a:hover, div.site-info a:active{
 /**/
 /*———————————————————————————————————————— main content */
 
-main#primary{
+main{
   padding: 1.5rem 3rem 0rem 3rem;
   max-width:1000px;
 }
@@ -1237,7 +1238,7 @@ nav#site-navigation.toggled ul#primary-menu li{
 /**/
 /*———————————————————————————————————————— main content */
 
-main#primary{
+main{
   padding: 0.5rem 1.6rem;
 }
 /**/

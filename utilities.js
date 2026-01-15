@@ -16,13 +16,13 @@ Please give as much information as possible.`
 
 /*———————————————————————————————————————— alertMail() */
 
-function alertMail(){
+function alertmail(){
   alert(emailAddress.replaceAll(deleteChar,'').replace('.co',tldNew))
 }
 ///
 /*———————————————————————————————————————— sendMail(emailSubject, emailBody) */
 
-function sendMail(emailSubject){
+function sendmail(emailSubject){
   let str = 'mailto:' + emailAddress.replaceAll(deleteChar,'').replace(tldOld,tldNew)
   str    += '?subject=' + emailSubject + '&body=' + encodeURIComponent(genericBody)
   location.href = str

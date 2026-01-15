@@ -33,27 +33,30 @@
 
   <div class="entry-content">
     <?php
-    the_content(
-      sprintf(
-        wp_kses(
-          /* translators: %s: Name of current post. Only visible to screen readers */
-          __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscore-me' ),
-          array(
-            'span' => array(
-              'class' => array(),
-            ),
-          )
-        ),
-        wp_kses_post( get_the_title() )
-      )
-    );
+    if ( is_singular() ) :
+      the_content(
+        sprintf(
+          wp_kses(
+            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscore-me' ),
+            array(
+              'span' => array(
+                'class' => array(),
+              ),
+            )
+          ),
+          wp_kses_post( get_the_title() )
+        )
+      );
 
-    wp_link_pages(
-      array(
-        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscore-me' ),
-        'after'  => '</div>',
-      )
-    );
+      wp_link_pages(
+        array(
+          'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscore-me' ),
+          'after'  => '</div>',
+        )
+      );
+    else :
+      the_excerpt();
+    endif;
     ?>
   </div><!-- .entry-content -->
 

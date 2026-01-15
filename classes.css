@@ -1,0 +1,36 @@
+
+/* vim: set foldmethod=marker fmr=/*—,/**\/ :*/
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: classes.css */
+
+
+a.product:link, a.product:visited{
+  padding:0 7px 2px 7px;
+  border-radius:3px;
+
+  color:white;
+  background-color:red;
+}
+
+a.product:hover, a.product:active{
+  color:black;
+  background-color:yellow;
+  border:0.5px solid black;
+}
+
+/*———————————————————————————————————————— ninja form "Contact Me" */
+
+div.nf-form-fields-required{
+  margin-bottom:0.5em;
+  font-size:smaller;
+  text-transform:uppercase;
+  opacity:0.6;
+  letter-spacing:0.1em;
+  
+}
+/**/
+
+
+/*:::::::::::::::::::::::::::::::::::::::: fin */
+
