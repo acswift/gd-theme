@@ -367,6 +367,19 @@ pre{
   margin:1.3rem 0;
 }
 /**/
+/*———————————————————————————————————————— tables
+
+figure class="wp-block-table is-style-stripes"
+  table class="has-fixed-layout"
+    thead
+      tr
+        th */
+
+figure.wp-block-table.is-style-stripes table.has-fixed-layout th {
+    text-align: left;
+    padding-left:20px;
+}
+/**/
 /*———————————————————————————————————————— table captions */
 
 figure.wp-block-table figcaption{
@@ -876,6 +889,17 @@ div.site-info a:hover, div.site-info a:active{
 }
 /**/
 
+/*———————————————————————————————————————— post stuff */
+
+footer.entry-footer span.tags-links{
+  margin-left:12px;
+}
+
+nav.post-navigation{ /* "previous/next" links */
+  display:none;
+}
+/**/
+
 /*:::::::::::::::::::::::::::::::::::::::: ▼ media query dependent */
 
 /*———————————————————————————————————————— ▼ 48em+ · big screen */
@@ -984,6 +1008,11 @@ div.site-info a:hover, div.site-info a:active{
   border-radius:0px 0px 5px 5px;
   }
 /**/
+
+.main-navigation ul ul a {
+	width: 400px;
+}
+
 /*———————————————————————————————————————— main content */
 
 main{

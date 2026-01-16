@@ -63,6 +63,9 @@
   --siteFooterBg          : grey;
   --siteFooterBg          : var(--charcoal);
   --imageCaption          : var(--darkergrey);
+
+  --prodBanner            : white;
+  --prodBannerBg          : var(--charcoal);
 }
 
 /**/

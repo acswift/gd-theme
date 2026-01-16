@@ -1,5 +1,9 @@
 <?php
 
+// vim: set foldmethod=marker fmr=/*\—,///: */
+
+
+
 //———————————————————————————————————————— custom css
 
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
@@ -101,6 +105,20 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 //———————————————————————————————————————— excerpts for pages
 
 add_post_type_support( 'page', 'excerpt' );
+
+//———————————————————————————————————————— change "Leave a Reply"
+// suggested by claud:  If you want to expose them in the editor dropdown, add this to your theme's functions.php:
+
+add_filter('image_size_names_choose', function($sizes) {
+    return array_merge($sizes, [
+        'thumbnail'    => __('75px / 150 mac'),
+        'medium'       => __('300 / 768 mac'),
+        'large'        => __('1024 / 2048 mac'),
+        'medium_large' => __('768 / 1536 mac'),
+        '1536x1536'    => __('× 1536 / 2048 mac'),
+        '2048x2048'    => __('× 2048 / 2048 mac'),
+    ]);
+});
 
 //———————————————————————————————————————— change "Leave a Reply"
 

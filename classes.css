@@ -30,7 +30,28 @@ div.nf-form-fields-required{
   
 }
 /**/
+/*———————————————————————————————————————— banner images for products */
 
+figure.wp-block-image.banner{
+  margin-bottom:0;
+}
+
+figure.wp-block-image.banner img{
+  zoom:1;
+  border-radius:0;
+  border-bottom: none;
+}
+
+/* banner headline under image */
+
+h1.wp-block-heading.banner{
+  width:100%;
+  margin-top:0;
+  padding:0.1em 0 0.1em 0.5em;
+  color:var(--prodBanner);
+  background-color:var(--prodBannerBg);
+}
+/**/
 
 /*:::::::::::::::::::::::::::::::::::::::: fin */
 
