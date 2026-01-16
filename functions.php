@@ -111,12 +111,12 @@ add_post_type_support( 'page', 'excerpt' );
 
 add_filter('image_size_names_choose', function($sizes) {
     return array_merge($sizes, [
-        'thumbnail'    => __('75px / 150 mac'),
-        'medium'       => __('300 / 768 mac'),
-        'large'        => __('1024 / 2048 mac'),
-        'medium_large' => __('768 / 1536 mac'),
-        '1536x1536'    => __('× 1536 / 2048 mac'),
-        '2048x2048'    => __('× 2048 / 2048 mac'),
+        'thumbnail'    => __('150px / 75 mac'),
+        'medium'       => __('300px / 384 mac'),
+        'large'        => __('1024px / 1024 mac'),
+        'medium_large' => __('768px / 768 mac'),
+        '1536x1536'    => __('× 1536 / 1024 mac'),
+        '2048x2048'    => __('× 2048 / 1024 mac'),
     ]);
 });
 
