@@ -66,6 +66,10 @@
 
   --prodBanner            : white;
   --prodBannerBg          : var(--charcoal);
+  --submenuBg             : var(--charcoal);
+
+  --menuSearch            : var(--charcoal);
+  --menuSearchBg          : whitesmoke;
 }
 
 /**/
