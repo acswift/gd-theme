@@ -109,15 +109,17 @@ add_post_type_support( 'page', 'excerpt' );
 //———————————————————————————————————————— change "Leave a Reply"
 // suggested by claud:  If you want to expose them in the editor dropdown, add this to your theme's functions.php:
 
-add_filter('image_size_names_choose', function($sizes) {
-    return array_merge($sizes, [
-        'thumbnail'    => __('150px / 75 mac'),
-        'medium'       => __('300px / 384 mac'),
-        'large'        => __('1024px / 1024 mac'),
-        'medium_large' => __('768px / 768 mac'),
-        '1536x1536'    => __('× 1536 / 1024 mac'),
-        '2048x2048'    => __('× 2048 / 1024 mac'),
-    ]);
+add_filter('image_size_names_choose', function ($sizes) {
+    unset($sizes['full']);
+
+    return [
+        'thumbnail'    => __('150px square'),
+        'medium'       => __('300px / 384px'),
+        'medium_large' => __('768px'),
+        'large'        => __('1024px'),
+        '1536x1536'    => __('1536px'),
+        '2048x2048'    => __('2048px'),
+    ];
 });
 
 //———————————————————————————————————————— change "Leave a Reply"

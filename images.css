@@ -26,13 +26,42 @@ WordPress automatically creates resized versions when you upload an image. The d
 Right now, the page is 904 px wide
 
 */
-/*———————————————————————————————————————— featured image in post
+/*———————————————————————————————————————— featured image in post on recent entries page
 
     shows only on recent entries page */
 
 /* header.entry-header div.post-thumbnail img.wp-post-image{*/
 div.post-thumbnail img.wp-post-image{
   display:none;
+}
+/**/
+/*———————————————————————————————————————— featured image on categories pages */
+
+article.has-post-thumbnail{ /* keeps posts from floating next to previous post images */
+  overflow:hidden;
+}
+
+article.has-post-thumbnail a.post-thumbnail{
+  display:block;
+  float:left;
+  margin-right:1em;
+  width:150px;
+  height:150px;
+  border-radius:10px;
+  border:0.5px solid #0009;
+  box-shadow:0px 10px 40px #00000028;
+  overflow:hidden;
+}
+
+article.has-post-thumbnail a.post-thumbnail img{
+  width:100%;
+  height:100%;
+  transition:transform 0.5s;
+  transform-origin:center;
+}
+
+article.has-post-thumbnail a.post-thumbnail img:hover{
+  transform:scale(1.05);
 }
 /**/
 /*———————————————————————————————————————— default images */

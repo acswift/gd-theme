@@ -4,19 +4,34 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: classes.css */
 
+/*———————————————————————————————————————— product cta's */
 
-a.product:link, a.product:visited{
+a.product:link, a.product:visited,
+a.producttel:link, a.producttel:visited{
   padding:0 7px 2px 7px;
-  border-radius:3px;
+
+  border: solid 0.5px red;
 
   color:white;
   background-color:red;
 }
 
-a.product:hover, a.product:active{
+a.product:link, a.product:visited{
+  margin-right:-1px;
+  border-radius:3px 0 0 3px;
+}
+
+a.producttel:link, a.producttel:visited{
+  margin-left:-1px;
+  margin-right:0.7em;
+  border-radius:0px 3px 3px 0;
+}
+
+a.product:hover, a.product:active,
+a.producttel:hover, a.producttel:active{
   color:black;
+  border-color:black;
   background-color:yellow;
-  border:0.5px solid black;
 }
 
 /*———————————————————————————————————————— ninja form "Contact Me" */

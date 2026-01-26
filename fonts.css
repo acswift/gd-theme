@@ -91,16 +91,23 @@ font-family  */
   Bookerly-LCD-Light-Italic.woff*
 
 /**/
+@font-face {
+  font-family:'Helvetica-Inserat';
+  font-weight:700;
+  font-style:normal;
+  src:url('/wp-content/themes/gd-theme/fonts/Helvetica-Inserat-LT-Std.woff') format('woff');
+ }
+
 /*———————————————————————————————————————— font variables - matches color variables */
 
 :root{
-  --postedOnFont: 300 0.8em "IBM Plex Mono";
-  --bodyFont    : 400 1.0em "IBM Plex Sans";
-  --siteDescFont: 400 0.8em "IBM Plex Mono";
-  --siteNavFont : 400 0.9em "IBM Plex Mono";
-  --hxFont      : 700 1.0em "IBM Plex Sans";
-  --footerFont  : 300 1.0em/2.4em "IBM Plex Sans";
-  --captionFont : italic 300 1.0em/2.4em "IBM Plex Sans";
+  --postedOnFont: 300 0.8rem "IBM Plex Mono";
+  --bodyFont    : 300 1.0rem "IBM Plex Sans";
+  --siteDescFont: 400 0.8rem "IBM Plex Mono";
+  --siteNavFont : 400 0.9rem "IBM Plex Mono";
+  --hxFont      : 700 1.0rem "IBM Plex Sans";
+  --footerFont  : 300 1.0rem/2.4rem "IBM Plex Sans";
+  --captionFont : italic 300 1.0rem/2.4rem "IBM Plex Sans";
 }
 /**/
 
