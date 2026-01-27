@@ -22,9 +22,13 @@ function alertmail(){
 ///
 /*———————————————————————————————————————— sendMail(emailSubject, emailBody) */
 
-function sendmail(emailSubject){
+function sendmail(){
+  let obj = document.querySelector('h1.entry-title')
+  emailSubject = obj.innerHTML
+
   let str = 'mailto:' + emailAddress.replaceAll(deleteChar,'').replace(tldOld,tldNew)
   str    += '?subject=' + emailSubject + '&body=' + encodeURIComponent(genericBody)
+
   location.href = str
 }
 ///
