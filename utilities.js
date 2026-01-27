@@ -22,7 +22,7 @@ function alertmail(){
 ///
 /*———————————————————————————————————————— sendMail(emailSubject, emailBody) */
 
-function sendmail(){
+function requestinfo(){
   let obj = document.querySelector('h1.entry-title')
   emailSubject = obj.innerHTML
 
