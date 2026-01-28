@@ -302,12 +302,10 @@ upper-alpha, upper-latin
 */
 
 
-.site-main ol,
-.site-main ul{
+.site-main ol, .site-main ul{
   padding:0;
   margin-top:0.6rem;
   margin-bottom:0.6rem;
-  line-height:2.2rem;
 }
 
 .site-main ul ul{
@@ -317,15 +315,11 @@ upper-alpha, upper-latin
   list-style-type:"— ";
 }
 
-.site-main ul ul a:link,
-.site-main ul ul a:visited,
-#x{
+.site-main ul ul a:link, .site-main ul ul a:visited{
   color:var(--link-alt);
 }
 
-.site-main ul ul a:hover,
-.site-main ul ul a:active,
-#x{
+.site-main ul ul a:hover, .site-main ul ul a:active{
   color:var(--link-alt-active);
 }
 
@@ -336,16 +330,16 @@ upper-alpha, upper-latin
   list-style-type:"› ";
 }
 
-.site-main ul ul ul a:link,
-.site-main ul ul ul a:visited,
-#x{
+.site-main ul ul ul a:link, .site-main ul ul ul a:visited{
   color:var(--text);
 }
 
-.site-main ul ul ul a:hover,
-.site-main ul ul ul a:active,
-#x{
+.site-main ul ul ul a:hover, .site-main ul ul ul a:active{
   color:var(--link-alt-active);
+}
+
+.site-main ul.wp-block-list li{
+  line-height:1.8rem;
 }
 /**/
 /*———————————————————————————————————————— boxed paragraphs */
