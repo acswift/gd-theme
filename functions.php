@@ -113,12 +113,12 @@ add_filter('image_size_names_choose', function ($sizes) {
     unset($sizes['full']);
 
     return [
-        'thumbnail'    => __('150px square'),
-        'medium'       => __('300px / 384px'),
-        'medium_large' => __('768px'),
-        'large'        => __('1024px'),
-        '1536x1536'    => __('1536px'),
-        '2048x2048'    => __('2048px'),
+        'thumbnail'    => __('square thumbnail'),
+        'medium'       => __('192px'),
+        'medium_large' => __('1/4 width'),
+        'large'        => __('half-width'),
+        '1536x1536'    => __('3/4 width'),
+        '2048x2048'    => __('full-width'),
     ];
 });
 

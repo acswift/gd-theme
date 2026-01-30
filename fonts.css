@@ -101,8 +101,9 @@ font-family  */
 /*———————————————————————————————————————— font variables - matches color variables */
 
 :root{
+  --bodyFontSize: 1.0rem;
   --postedOnFont: 300 0.8rem "IBM Plex Mono";
-  --bodyFont    : 300 1.0rem "IBM Plex Sans";
+  --bodyFont    : 300 var(--bodyFontSize) "IBM Plex Sans";
   --siteDescFont: 400 0.8rem "IBM Plex Mono";
   --siteNavFont : 400 0.9rem "IBM Plex Mono";
   --hxFont      : 700 1.0rem "IBM Plex Sans";

@@ -505,6 +505,12 @@ div.widget_tag_cloud h2.widget-title,
 div.widget_tag_cloud h2.widgettitle{ background-color:blue; }
 
 /**/
+/*———————————————————————————————————————— accordeon text */
+
+h3.wp-block-accordion-heading{
+  font-size:var(--bodyFontSize);
+}
+/**/
 /*———————————————————————————————————————— togglable paragraphs */
 
 .togglable{
