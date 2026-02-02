@@ -67,6 +67,12 @@ input[type="search"] { /* turn off automatic iPhone rounding */
   -webkit-appearance: none;
 }
 /**/
+/*———————————————————————————————————————— variable declarations */
+
+:root{
+  --mainWidth:1200px;
+}
+/**/
 
 /*:::::::::::::::::::::::::::::::::::::::: css definitions */
 
@@ -200,39 +206,75 @@ main a:hover, main a:active{
   font-size:0.8rem;
 }
 /**/
+
+/*:::::::::::::::::::::::::::::::::::::::: content */
+
+/*———————————————————————————————————————— post stuff */
+
+footer.entry-footer{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+footer.entry-footer span.tags-links{
+  margin-left:12px;
+}
+
+nav.post-navigation{ /* "previous/next" links */
+  display:none;
+}
+/**/
 /*———————————————————————————————————————— entry header */
 
 header.entry-header{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
   margin-top:2.0rem;
+}
+/**/
+/*———————————————————————————————————————— tags list */
+
+div.wp-block-post-terms{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
 }
 /**/
 /*———————————————————————————————————————— h tags */
 
 .site-main h1{
-	color:var(--hXcolor);
-  margin:1.0rem 0 0.6rem 0;
+  width:var(--mainWidth);
+	color:var(--hxColor);
+  margin:1.0rem auto 0.6rem auto;
 	font-size:2.1rem;
-  line-height:2.6rem;
+  letter-spacing:0.02em;
+  line-height:3.5rem;
 	font-weight:600;
 }
 
 .site-main h2{
-	color:var(--hXcolor);
-  margin:1.0rem 0 0.6rem 0;
-	font-size:1.3rem;
+  width:var(--mainWidth);
+	color:var(--hxColor);
+  margin:1.0rem auto 0.6rem auto;
+	font-size:1.7rem;
+  letter-spacing:0.02em;
 	font-weight:600;
 }
 
 .site-main h3{
-	color:var(--hXcolor);
-  margin:1.0rem 0 0.6rem 0;
+  width:var(--mainWidth);
+	color:var(--hxColor);
+  margin:1.0rem auto 0.6rem auto;
 	font-size:1.5rem;
 	font-weight:600;
 }
 
 .site-main h4{
-	color:var(--hXcolor);
-  margin:0.8rem 0 0 0;
+  width:var(--mainWidth);
+	color:var(--hxColor);
+  margin:0.8rem auto 0 auto;
 	font-size:1.2rem;
 	font-weight:600;
 }
@@ -257,24 +299,24 @@ header.entry-header{
 
 main.site-main article.page div.entry-content hr.wp-block-separator,
 main.site-main article.post div.entry-content hr.wp-block-separator{
+  width:var(--mainWidth);
+  margin:1.5rem auto; 
   border-top:none;
   border-bottom:1px dotted var(--dark-gray);
   background:none;
-  margin:1.5rem -3%;
-  width:106%;
 }
 
 .site-main p{
+  width:var(--mainWidth);
+  margin:0 auto 0.6rem auto;
   padding:0;
-  margin-top:0.6rem;
-  margin-bottom:0.6rem;
   line-height:1.8rem;
 }
 
-.site-main strong{
+/* .site-main strong{ /* also affects h1 etc. *
 	font-weight:600;
   color:var(--text-bold);
-}
+} */
 
 code{
   color:var(--codeColor);
@@ -303,9 +345,9 @@ upper-alpha, upper-latin
 
 
 .site-main ol, .site-main ul{
-  padding:0;
-  margin-top:0.6rem;
-  margin-bottom:0.6rem;
+  width:var(--mainWidth);
+  padding:0 0 0 2rem;
+  margin:0.6rem auto 0.6rem auto;
 }
 
 .site-main ul ul{
@@ -405,6 +447,22 @@ figure.wp-block-table table{
 
 figure.wp-block-table.is-style-stripes{
   border-bottom:none;
+}
+/**/
+/*———————————————————————————————————————— image galleries */
+
+figure.wp-block-gallery{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
+}
+/**/
+/*———————————————————————————————————————— file embeds */
+
+div.wp-block-file{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
 }
 /**/
 /*———————————————————————————————————————— youtube embed */
@@ -508,6 +566,7 @@ div.widget_tag_cloud h2.widgettitle{ background-color:blue; }
 /*———————————————————————————————————————— accordeon text */
 
 h3.wp-block-accordion-heading{
+  font-family:IBM Plex Sans;
   font-size:var(--bodyFontSize);
 }
 /**/
@@ -714,6 +773,9 @@ form#commentform p.form-submit input#submit{
   font-family:Open Sans;
 }
 /**/
+
+/*:::::::::::::::::::::::::::::::::::::::: footer */
+
 /*———————————————————————————————————————— footer */
 
 nav.posts-navigation{
@@ -901,17 +963,6 @@ div.site-info a:hover, div.site-info a:active{
 }
 /**/
 
-/*———————————————————————————————————————— post stuff */
-
-footer.entry-footer span.tags-links{
-  margin-left:12px;
-}
-
-nav.post-navigation{ /* "previous/next" links */
-  display:none;
-}
-/**/
-
 /*:::::::::::::::::::::::::::::::::::::::: ▼ media query dependent */
 
 /*———————————————————————————————————————— ▼ 48em+ · big screen */
@@ -1037,8 +1088,7 @@ nav#site-navigation form.search-form input.search-submit{ /* hide submit button 
 /*———————————————————————————————————————— main content */
 
 main{
-  padding: 1.5rem 3rem 0rem 3rem;
-  max-width:1600px;
+  padding: 1.5rem 0 0rem 0;
 }
 /**/
 /*———————————————————————————————————————— tables */

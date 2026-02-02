@@ -39,8 +39,8 @@
 /*———————————————————————————————————————— missing css colors */
 
 :root {
-  --charcoal:rgb( 20%,  20%,  20%);
-  --darkergrey:hsl(0, 0%, 40%);
+  --charcoal  :hsl(0, 0%, 20%);
+  --darkergray:hsl(0, 0%, 30%);
 }
 /**/
 /*———————————————————————————————————————— color variables named for IDs & classes */
@@ -49,7 +49,7 @@
   --postedOnColor         : #999;
   --bodyColor             : #333;
   --siteDescColor         : #999;
-  --hxColor               : var(--light-gray);
+  --hxColor               : var(--darkergray);
 
   --siteBranding          : rgb( 50%,   0%,  38%);
   --siteBrandingBg        : white;
