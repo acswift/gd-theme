@@ -25,10 +25,11 @@ font-family  */
 :root{
   --bodyFontSize: 1.0rem;
   --postedOnFont: 300 0.8rem "IBM Plex Mono";
+  --topTaggedFont: 300 0.8rem "IBM Plex Mono";
   --bodyFont    : 300 var(--bodyFontSize) "IBM Plex Sans";
   --siteDescFont: 400 0.8rem "IBM Plex Mono";
   --siteNavFont : 400 0.9rem "IBM Plex Mono";
-  --hxFont      : 600 1.0rem "Teko";
+  --hxFont      : 600 1.0rem "Barlow Condensed";
   --footerFont  : 300 1.0rem/2.4rem "IBM Plex Sans";
   --captionFont : italic 300 1.0rem/2.4rem "IBM Plex Sans";
 }

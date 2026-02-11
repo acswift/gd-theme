@@ -177,7 +177,7 @@ main{
 }
 
 header.entry-header h1.entry-title{
-	color:var(--hXcolor);
+	color:var(--hxColor);
   margin:1.0rem 0 0.6rem 0;
 	font-size:2.1rem;
   line-height:2.6rem;
@@ -234,24 +234,40 @@ header.entry-header{
   margin-top:2.0rem;
 }
 /**/
-/*———————————————————————————————————————— tags list */
+/*———————————————————————————————————————— post date */
 
-div.wp-block-post-terms{
+span.posted-on{
+  display:block;
   width:var(--mainWidth);
   margin-left:auto;
   margin-right:auto;
+  margin-top:2.0rem;
+}
+/**/
+/*———————————————————————————————————————— tags list in body */
+
+div.taxonomy-post_tag{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:1.5rem;
+  font:var(--topTaggedFont);
+  text-transform:uppercase;
 }
 /**/
 /*———————————————————————————————————————— h tags */
+
+.site-main h1, .site-main h1, .site-main h1, .site-main h1{
+  letter-spacing:0.02em;
+	font-weight:500;
+}
 
 .site-main h1{
   width:var(--mainWidth);
 	color:var(--hxColor);
   margin:1.0rem auto 0.6rem auto;
 	font-size:2.1rem;
-  letter-spacing:0.02em;
   line-height:3.5rem;
-	font-weight:600;
 }
 
 .site-main h2{
@@ -259,8 +275,6 @@ div.wp-block-post-terms{
 	color:var(--hxColor);
   margin:1.0rem auto 0.6rem auto;
 	font-size:1.7rem;
-  letter-spacing:0.02em;
-	font-weight:600;
 }
 
 .site-main h3{
@@ -268,7 +282,6 @@ div.wp-block-post-terms{
 	color:var(--hxColor);
   margin:1.0rem auto 0.6rem auto;
 	font-size:1.5rem;
-	font-weight:600;
 }
 
 .site-main h4{
@@ -276,7 +289,6 @@ div.wp-block-post-terms{
 	color:var(--hxColor);
   margin:0.8rem auto 0 auto;
 	font-size:1.2rem;
-	font-weight:600;
 }
 
 .site-main h1 a:link, .site-main h1 a:visited,
@@ -500,7 +512,7 @@ border-top:none;
 }
 
 .hentry .entry-header h2.entry-title{
-  font-size:1.2rem;
+  font-size:1.6rem;
   line-height:1.6rem;
 	margin-bottom:0.7rem;
   padding:0;
@@ -576,6 +588,19 @@ h3.wp-block-accordion-heading{
   display:none;
 }
 /**/
+/*———————————————————————————————————————— previous link on list pages */
+
+.site-main nav.posts-navigation{
+  width:var(--mainWidth);
+  margin:0 auto 0.6rem auto;
+  text-transform:uppercase;
+  font-size:0.9rem;
+  font-weight:600;
+}
+
+nav.posts-navigation div.nav-links{
+}
+/**/
 /*———————————————————————————————————————— comment section */
 
 div#comments, div.comments-area{ /* gray box */
@@ -597,7 +622,7 @@ h2.comments-title{
 }
 
 h2.comments-title span{
-  color:var(--hXcolor);
+  color:var(--hxColor);
 }
 
 p.logged-in-as{
@@ -774,19 +799,30 @@ form#commentform p.form-submit input#submit{
 }
 /**/
 
-/*:::::::::::::::::::::::::::::::::::::::: footer */
+/*:::::::::::::::::::::::::::::::::::::::: list pages (categories etc.) */
 
-/*———————————————————————————————————————— footer */
+/*———————————————————————————————————————— main entry */
 
-nav.posts-navigation{
-  text-transform:uppercase;
-  font-size:0.9rem;
-  font-weight:600;
-}
-
-nav.posts-navigation div.nav-links{
+article.post{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
 }
 /**/
+
+/*:::::::::::::::::::::::::::::::::::::::: ninja forms */
+
+/*———————————————————————————————————————— form width */
+
+div.nf-form-cont{
+  width:var(--mainWidth);
+  margin-left:auto;
+  margin-right:auto;
+}
+/**/
+
+/*:::::::::::::::::::::::::::::::::::::::: footer */
+
 /*———————————————————————————————————————— widget area in footer */
 
 aside.widget-area{
