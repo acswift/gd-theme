@@ -436,8 +436,12 @@ figure class="wp-block-table is-style-stripes"
         th */
 
 figure.wp-block-table.is-style-stripes table.has-fixed-layout th {
-    text-align: left;
-    padding-left:20px;
+  text-align: left;
+  padding-left:20px;
+}
+
+figure.wp-block-table.is-style-stripes table.has-fixed-layout td {
+  font:var(--tableFont);
 }
 /**/
 /*———————————————————————————————————————— table captions */

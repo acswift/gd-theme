@@ -32,6 +32,7 @@ font-family  */
   --hxFont      : 600 1.0rem "Barlow Condensed";
   --footerFont  : 300 1.0rem/2.4rem "IBM Plex Sans";
   --captionFont : italic 300 1.0rem/2.4rem "IBM Plex Sans";
+  --tableFont   : 400 var(--bodyFontSize) "IBM Plex Mono";
 }
 b, strong{
   font-weight:600;
