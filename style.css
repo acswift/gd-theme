@@ -207,7 +207,7 @@ main a:hover, main a:active{
 }
 /**/
 
-/*:::::::::::::::::::::::::::::::::::::::: content */
+/*:::::::::::::::::::::::::::::::::::::::: regular page */
 
 /*———————————————————————————————————————— post stuff */
 
@@ -258,8 +258,7 @@ div.taxonomy-post_tag{
 /*———————————————————————————————————————— h tags */
 
 .site-main h1, .site-main h1, .site-main h1, .site-main h1{
-  letter-spacing:0.02em;
-	font-weight:500;
+  letter-spacing:0.0em;
 }
 
 .site-main h1{
@@ -323,6 +322,12 @@ main.site-main article.post div.entry-content hr.wp-block-separator{
   margin:0 auto 0.6rem auto;
   padding:0;
   line-height:1.8rem;
+}
+
+.site-main .wp-block-column p{
+  width:auto;
+  margin-left:0;
+  margin-right:0;
 }
 
 /* .site-main strong{ /* also affects h1 etc. *
@@ -500,25 +505,43 @@ div.wp-block-embed__wrapper iframe{
   filter: drop-shadow(0rem 0.5rem 0.8rem #0003);
 }
 /**/
-/*———————————————————————————————————————— search results */
 
-h1.page-title span{ color:var(--dark-gray);
+/*:::::::::::::::::::::::::::::::::::::::: list pages */
+
+/*———————————————————————————————————————— search results header */
+
+h1.page-title{
+  font-weight:600;
+  color:var(--dark-gray);
 }
 
-article.type-page{
-  margin:0;
+
+h1.page-title span{ 
+  color:var(--keywordColor);
+}
+/**/
+/*———————————————————————————————————————— single search result */
+
+article.page, article.post{
+}
+
+article.type-page, article.type-post{
+  width:var(--mainWidth);
+  margin:0 auto 1rem auto;
   padding:0.2rem 0 1.1rem 0;
   border-top:1px dotted var(--light-gray);
 }
 
-article.type-page:first-of-type{
-border-top:none;
+article.type-page:first-of-type, article.type-post:first-of-type{
+  border-top:none;
 }
+
+/* headline */
 
 .hentry .entry-header h2.entry-title{
   font-size:1.6rem;
   line-height:1.6rem;
-	margin-bottom:0.7rem;
+	margin-bottom:1.7rem;
   padding:0;
 }
 
@@ -531,6 +554,14 @@ border-top:none;
 .hentry .entry-header h2.entry-title a:active{
   color:var(--link-alt-active) !important;
 }
+
+/* date (posted on) */
+
+article.type-page span.posted-on, article.type-post span.posted-on{
+  display:none;
+}
+
+/* summary */
 
 .entry-summary{
   margin:0;
@@ -800,17 +831,6 @@ form#commentform p.form-submit input#submit{
   margin-top:0.6rem;
   height:1.5rem;
   font-family:Open Sans;
-}
-/**/
-
-/*:::::::::::::::::::::::::::::::::::::::: list pages (categories etc.) */
-
-/*———————————————————————————————————————— main entry */
-
-article.post{
-  width:var(--mainWidth);
-  margin-left:auto;
-  margin-right:auto;
 }
 /**/
 

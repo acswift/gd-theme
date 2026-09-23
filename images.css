@@ -101,6 +101,12 @@ figure.white img{ /* for images with a white background */
   margin-bottom:-1.4rem;
 }
 
+figure.left img{
+  float:left;
+  margin-right:30px;
+  margin-bottom: 20px;
+}
+
 figure.drop img{
   border-radius:10px !important;
   border:0.5px solid #0004;

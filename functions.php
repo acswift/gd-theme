@@ -192,4 +192,22 @@ function modify_page_guid_for_feed($guid, $post_id) {
 }
 add_filter('get_the_guid', 'modify_page_guid_for_feed', 10, 2);
 
+//———————————————————————————————————————— outgoing mail from address
+
+add_filter('wp_mail_from', function($email) {
+  return 'noreply@generatordata.net';
+});
+
+add_filter('wp_mail_from_name', function($name) {
+  return 'GeneratorData.net';
+});
+
+// Replies go to the real inbox even though From is noreply
+add_filter('wp_mail', function($args) {
+  if (!isset($args['headers'])) $args['headers'] = [];
+  if (is_string($args['headers'])) $args['headers'] = [$args['headers']];
+  $args['headers'][] = 'Reply-To: list@acswift.com';
+  return $args;
+});
+
 //———————————————————————————————————————— fin

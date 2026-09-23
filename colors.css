@@ -70,6 +70,8 @@
 
   --menuSearch            : var(--charcoal);
   --menuSearchBg          : whitesmoke;
+
+  --keywordColor          : var(--link);
 }
 
 /**/

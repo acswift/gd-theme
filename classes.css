@@ -94,5 +94,17 @@ url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVE
 }
 /**/
 
+/*———————————————————————————————————————— notice box */
+
+div.entry-content p.notice{
+  padding:10px 15px 12px 15px;
+  border:0.5px solid #555;
+  border-radius:5px;
+  background-color:#eee;
+  font-size:calc(1em - 1.5px);
+  line-height:calc(1lh - 0.5px);
+}
+/**/
+
 /*:::::::::::::::::::::::::::::::::::::::: fin */
 
